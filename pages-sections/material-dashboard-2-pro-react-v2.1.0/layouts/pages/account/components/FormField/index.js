@@ -14,10 +14,10 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Material Dashboard 2 PRO React components
-import MDInput from "components/MDInput";
+import MDInput from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDInput'
 
 function FormField({ label, ...rest }) {
   return (
@@ -28,17 +28,17 @@ function FormField({ label, ...rest }) {
       InputLabelProps={{ shrink: true }}
       {...rest}
     />
-  );
+  )
 }
 
 // Setting default values for the props of FormField
 FormField.defaultProps = {
-  label: " ",
-};
+  label: ' ',
+}
 
 // Typechecking props for FormField
 FormField.propTypes = {
   label: PropTypes.string,
-};
+}
 
-export default FormField;
+export default FormField

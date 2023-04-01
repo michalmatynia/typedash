@@ -14,17 +14,17 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 PRO React base styles
-import colors from "assets/theme/base/colors";
+import colors from 'themes/material-dashboard-2-pro-react-v2.1.0/theme/base/colors'
 
-const { white } = colors;
+const { white } = colors
 
 function configs(backgroundColor) {
   return {
     data: {
-      labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       datasets: [
         {
-          label: "Visitors",
+          label: 'Visitors',
           tension: 0.5,
           pointRadius: 0,
           borderColor: white.main,
@@ -46,7 +46,7 @@ function configs(backgroundColor) {
       },
       interaction: {
         intersect: false,
-        mode: "index",
+        mode: 'index',
       },
       scales: {
         y: {
@@ -73,7 +73,7 @@ function configs(backgroundColor) {
         },
       },
     },
-  };
+  }
 }
 
-export default configs;
+export default configs

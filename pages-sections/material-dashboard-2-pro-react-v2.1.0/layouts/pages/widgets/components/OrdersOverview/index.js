@@ -14,32 +14,38 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React examples
-import TimelineItem from "examples/Timeline/TimelineItem";
+import TimelineItem from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Timeline/TimelineItem'
 
 function OrdersOverview() {
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: '100%' }}>
       <MDBox pt={3} px={3}>
         <MDTypography variant="h6" fontWeight="medium">
           Orders overview
         </MDTypography>
         <MDBox mt={0} mb={2}>
           <MDTypography variant="button" color="text" fontWeight="regular">
-            <MDTypography display="inline" variant="body2" verticalAlign="middle">
-              <Icon sx={{ color: ({ palette: { success } }) => success.main }}>arrow_upward</Icon>
+            <MDTypography
+              display="inline"
+              variant="body2"
+              verticalAlign="middle"
+            >
+              <Icon sx={{ color: ({ palette: { success } }) => success.main }}>
+                arrow_upward
+              </Icon>
             </MDTypography>
             &nbsp;
             <MDTypography variant="button" color="text" fontWeight="medium">
               24%
-            </MDTypography>{" "}
+            </MDTypography>{' '}
             this month
           </MDTypography>
         </MDBox>
@@ -78,7 +84,7 @@ function OrdersOverview() {
         />
       </MDBox>
     </Card>
-  );
+  )
 }
 
-export default OrdersOverview;
+export default OrdersOverview

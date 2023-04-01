@@ -13,25 +13,25 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Autocomplete from "@mui/material/Autocomplete";
+import Grid from '@mui/material/Grid'
+import Autocomplete from '@mui/material/Autocomplete'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDEditor from "components/MDEditor";
-import MDInput from "components/MDInput";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDEditor from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDEditor'
+import MDInput from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDInput'
 
 // NewProduct page components
-import FormField from "layouts/ecommerce/products/new-product/components/FormField";
+import FormField from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/new-product/components/FormField'
 
 function ProductInfo() {
   const [editorValue, setEditorValue] = useState(
-    "<p>Some initial <strong>bold</strong> text</p><br><br><br><br>"
-  );
+    '<p>Some initial <strong>bold</strong> text</p><br><br><br><br>'
+  )
 
   return (
     <MDBox>
@@ -50,7 +50,12 @@ function ProductInfo() {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <MDBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
-              <MDTypography component="label" variant="button" fontWeight="regular" color="text">
+              <MDTypography
+                component="label"
+                variant="button"
+                fontWeight="regular"
+                color="text"
+              >
                 Description&nbsp;&nbsp;
                 <MDTypography variant="caption" color="text">
                   (optional)
@@ -74,8 +79,16 @@ function ProductInfo() {
               </MDBox>
               <Autocomplete
                 defaultValue="Clothing"
-                options={["Clothing", "Electronics", "Furniture", "Others", "Real Estate"]}
-                renderInput={(params) => <MDInput {...params} variant="standard" />}
+                options={[
+                  'Clothing',
+                  'Electronics',
+                  'Furniture',
+                  'Others',
+                  'Real Estate',
+                ]}
+                renderInput={(params) => (
+                  <MDInput {...params} variant="standard" />
+                )}
               />
             </MDBox>
             <MDBox mb={2} display="inline-block">
@@ -91,14 +104,22 @@ function ProductInfo() {
             </MDBox>
             <Autocomplete
               defaultValue="Medium"
-              options={["Extra Large", "Extra Small", "Large", "Medium", "Small"]}
-              renderInput={(params) => <MDInput {...params} variant="standard" />}
+              options={[
+                'Extra Large',
+                'Extra Small',
+                'Large',
+                'Medium',
+                'Small',
+              ]}
+              renderInput={(params) => (
+                <MDInput {...params} variant="standard" />
+              )}
             />
           </Grid>
         </Grid>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
-export default ProductInfo;
+export default ProductInfo

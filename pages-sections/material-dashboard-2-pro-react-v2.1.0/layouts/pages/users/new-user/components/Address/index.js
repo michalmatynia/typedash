@@ -14,24 +14,29 @@ Coded by www.creative-tim.com
 */
 
 // prop-type is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Autocomplete from "@mui/material/Autocomplete";
+import Grid from '@mui/material/Grid'
+import Autocomplete from '@mui/material/Autocomplete'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDInput from "components/MDInput";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDInput from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDInput'
 
 // NewUser page components
-import FormField from "layouts/pages/users/new-user/components/FormField";
+import FormField from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/users/new-user/components/FormField'
 
 function Address({ formData }) {
-  const { formField, values, errors, touched } = formData;
-  const { address1, address2, city, zip } = formField;
-  const { address1: address1V, address2: address2V, city: cityV, zip: zipV } = values;
+  const { formField, values, errors, touched } = formData
+  const { address1, address2, city, zip } = formField
+  const {
+    address1: address1V,
+    address2: address2V,
+    city: cityV,
+    zip: zipV,
+  } = values
 
   return (
     <MDBox>
@@ -77,8 +82,10 @@ function Address({ formData }) {
           </Grid>
           <Grid item xs={6} sm={3}>
             <Autocomplete
-              options={["State 1", "State 2", "State 3"]}
-              renderInput={(params) => <MDInput {...params} variant="standard" label="State" />}
+              options={['State 1', 'State 2', 'State 3']}
+              renderInput={(params) => (
+                <MDInput {...params} variant="standard" label="State" />
+              )}
             />
           </Grid>
           <Grid item xs={6} sm={3}>
@@ -95,12 +102,12 @@ function Address({ formData }) {
         </Grid>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
 // typechecking props for Address
 Address.propTypes = {
   formData: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
-};
+}
 
-export default Address;
+export default Address

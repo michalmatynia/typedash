@@ -13,54 +13,54 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
+import Grid from '@mui/material/Grid'
+import Card from '@mui/material/Card'
+import Stepper from '@mui/material/Stepper'
+import Step from '@mui/material/Step'
+import StepLabel from '@mui/material/StepLabel'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
 
 // Wizard page components
-import About from "layouts/applications/wizard/components/About";
-import Account from "layouts/applications/wizard/components/Account";
-import Address from "layouts/applications/wizard/components/Address";
+import About from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/applications/wizard/components/About'
+import Account from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/applications/wizard/components/Account'
+import Address from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/applications/wizard/components/Address'
 
 function getSteps() {
-  return ["About", "Account", "Address"];
+  return ['About', 'Account', 'Address']
 }
 
 function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
-      return <About />;
+      return <About />
     case 1:
-      return <Account />;
+      return <Account />
     case 2:
-      return <Address />;
+      return <Address />
     default:
-      return null;
+      return null
   }
 }
 
 function Wizard() {
-  const [activeStep, setActiveStep] = useState(0);
-  const steps = getSteps();
-  const isLastStep = activeStep === steps.length - 1;
+  const [activeStep, setActiveStep] = useState(0)
+  const steps = getSteps()
+  const isLastStep = activeStep === steps.length - 1
 
-  const handleNext = () => setActiveStep(activeStep + 1);
-  const handleBack = () => setActiveStep(activeStep - 1);
+  const handleNext = () => setActiveStep(activeStep + 1)
+  const handleBack = () => setActiveStep(activeStep - 1)
 
   return (
     <DashboardLayout>
@@ -91,11 +91,20 @@ function Wizard() {
               <MDBox p={2}>
                 <MDBox>
                   {getStepContent(activeStep)}
-                  <MDBox mt={3} width="100%" display="flex" justifyContent="space-between">
+                  <MDBox
+                    mt={3}
+                    width="100%"
+                    display="flex"
+                    justifyContent="space-between"
+                  >
                     {activeStep === 0 ? (
                       <MDBox />
                     ) : (
-                      <MDButton variant="outlined" color="dark" onClick={handleBack}>
+                      <MDButton
+                        variant="outlined"
+                        color="dark"
+                        onClick={handleBack}
+                      >
                         back
                       </MDButton>
                     )}
@@ -104,7 +113,7 @@ function Wizard() {
                       color="dark"
                       onClick={!isLastStep ? handleNext : undefined}
                     >
-                      {isLastStep ? "send" : "next"}
+                      {isLastStep ? 'send' : 'next'}
                     </MDButton>
                   </MDBox>
                 </MDBox>
@@ -115,7 +124,7 @@ function Wizard() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default Wizard;
+export default Wizard

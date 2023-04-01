@@ -13,74 +13,79 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Tooltip from "@mui/material/Tooltip";
-import Icon from "@mui/material/Icon";
-import Card from "@mui/material/Card";
+import Grid from '@mui/material/Grid'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import Tooltip from '@mui/material/Tooltip'
+import Icon from '@mui/material/Icon'
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDBadgeDot from "components/MDBadgeDot";
-import MDButton from "components/MDButton";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDBadgeDot from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBadgeDot'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import DefaultStatisticsCard from "examples/Cards/StatisticsCards/DefaultStatisticsCard";
-import DefaultLineChart from "examples/Charts/LineCharts/DefaultLineChart";
-import HorizontalBarChart from "examples/Charts/BarCharts/HorizontalBarChart";
-import SalesTable from "examples/Tables/SalesTable";
-import DataTable from "examples/Tables/DataTable";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
+import DefaultStatisticsCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/StatisticsCards/DefaultStatisticsCard'
+import DefaultLineChart from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Charts/LineCharts/DefaultLineChart'
+import HorizontalBarChart from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Charts/BarCharts/HorizontalBarChart'
+import SalesTable from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Tables/SalesTable'
+import DataTable from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Tables/DataTable'
 
 // Sales dashboard components
-import ChannelsChart from "layouts/dashboards/sales/components/ChannelsChart";
+import ChannelsChart from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/sales/components/ChannelsChart'
 
 // Data
-import defaultLineChartData from "layouts/dashboards/sales/data/defaultLineChartData";
-import horizontalBarChartData from "layouts/dashboards/sales/data/horizontalBarChartData";
-import salesTableData from "layouts/dashboards/sales/data/salesTableData";
-import dataTableData from "layouts/dashboards/sales/data/dataTableData";
+import defaultLineChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/sales/data/defaultLineChartData'
+import horizontalBarChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/sales/data/horizontalBarChartData'
+import salesTableData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/sales/data/salesTableData'
+import dataTableData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/sales/data/dataTableData'
 
 function Sales() {
   // DefaultStatisticsCard state for the dropdown value
-  const [salesDropdownValue, setSalesDropdownValue] = useState("6 May - 7 May");
-  const [customersDropdownValue, setCustomersDropdownValue] = useState("6 May - 7 May");
-  const [revenueDropdownValue, setRevenueDropdownValue] = useState("6 May - 7 May");
+  const [salesDropdownValue, setSalesDropdownValue] = useState('6 May - 7 May')
+  const [customersDropdownValue, setCustomersDropdownValue] =
+    useState('6 May - 7 May')
+  const [revenueDropdownValue, setRevenueDropdownValue] =
+    useState('6 May - 7 May')
 
   // DefaultStatisticsCard state for the dropdown action
-  const [salesDropdown, setSalesDropdown] = useState(null);
-  const [customersDropdown, setCustomersDropdown] = useState(null);
-  const [revenueDropdown, setRevenueDropdown] = useState(null);
+  const [salesDropdown, setSalesDropdown] = useState(null)
+  const [customersDropdown, setCustomersDropdown] = useState(null)
+  const [revenueDropdown, setRevenueDropdown] = useState(null)
 
   // DefaultStatisticsCard handler for the dropdown action
-  const openSalesDropdown = ({ currentTarget }) => setSalesDropdown(currentTarget);
+  const openSalesDropdown = ({ currentTarget }) =>
+    setSalesDropdown(currentTarget)
   const closeSalesDropdown = ({ currentTarget }) => {
-    setSalesDropdown(null);
-    setSalesDropdownValue(currentTarget.innerText || salesDropdownValue);
-  };
-  const openCustomersDropdown = ({ currentTarget }) => setCustomersDropdown(currentTarget);
+    setSalesDropdown(null)
+    setSalesDropdownValue(currentTarget.innerText || salesDropdownValue)
+  }
+  const openCustomersDropdown = ({ currentTarget }) =>
+    setCustomersDropdown(currentTarget)
   const closeCustomersDropdown = ({ currentTarget }) => {
-    setCustomersDropdown(null);
-    setCustomersDropdownValue(currentTarget.innerText || salesDropdownValue);
-  };
-  const openRevenueDropdown = ({ currentTarget }) => setRevenueDropdown(currentTarget);
+    setCustomersDropdown(null)
+    setCustomersDropdownValue(currentTarget.innerText || salesDropdownValue)
+  }
+  const openRevenueDropdown = ({ currentTarget }) =>
+    setRevenueDropdown(currentTarget)
   const closeRevenueDropdown = ({ currentTarget }) => {
-    setRevenueDropdown(null);
-    setRevenueDropdownValue(currentTarget.innerText || salesDropdownValue);
-  };
+    setRevenueDropdown(null)
+    setRevenueDropdownValue(currentTarget.innerText || salesDropdownValue)
+  }
 
   // Dropdown menu template for the DefaultStatisticsCard
   const renderMenu = (state, close) => (
     <Menu
       anchorEl={state}
-      transformOrigin={{ vertical: "top", horizontal: "center" }}
+      transformOrigin={{ vertical: 'top', horizontal: 'center' }}
       open={Boolean(state)}
       onClose={close}
       keepMounted
@@ -90,7 +95,7 @@ function Sales() {
       <MenuItem onClick={close}>Last week</MenuItem>
       <MenuItem onClick={close}>Last 30 days</MenuItem>
     </Menu>
-  );
+  )
 
   return (
     <DashboardLayout>
@@ -103,9 +108,9 @@ function Sales() {
                 title="sales"
                 count="$230,220"
                 percentage={{
-                  color: "success",
-                  value: "+55%",
-                  label: "since last month",
+                  color: 'success',
+                  value: '+55%',
+                  label: 'since last month',
                 }}
                 dropdown={{
                   action: openSalesDropdown,
@@ -119,9 +124,9 @@ function Sales() {
                 title="customers"
                 count="3.200"
                 percentage={{
-                  color: "success",
-                  value: "+12%",
-                  label: "since last month",
+                  color: 'success',
+                  value: '+12%',
+                  label: 'since last month',
                 }}
                 dropdown={{
                   action: openCustomersDropdown,
@@ -135,9 +140,9 @@ function Sales() {
                 title="avg. revenue"
                 count="$1.200"
                 percentage={{
-                  color: "secondary",
-                  value: "+$213",
-                  label: "since last month",
+                  color: 'secondary',
+                  value: '+$213',
+                  label: 'since last month',
                 }}
                 dropdown={{
                   action: openRevenueDropdown,
@@ -159,11 +164,23 @@ function Sales() {
                 description={
                   <MDBox display="flex" justifyContent="space-between">
                     <MDBox display="flex" ml={-1}>
-                      <MDBadgeDot color="info" size="sm" badgeContent="Facebook Ads" />
-                      <MDBadgeDot color="dark" size="sm" badgeContent="Google Ads" />
+                      <MDBadgeDot
+                        color="info"
+                        size="sm"
+                        badgeContent="Facebook Ads"
+                      />
+                      <MDBadgeDot
+                        color="dark"
+                        size="sm"
+                        badgeContent="Google Ads"
+                      />
                     </MDBox>
                     <MDBox mt={-4} mr={-1} position="absolute" right="1.5rem">
-                      <Tooltip title="See which ads perform better" placement="left" arrow>
+                      <Tooltip
+                        title="See which ads perform better"
+                        placement="left"
+                        arrow
+                      >
                         <MDButton
                           variant="outlined"
                           color="secondary"
@@ -185,7 +202,10 @@ function Sales() {
         <MDBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
-              <HorizontalBarChart title="Sales by age" chart={horizontalBarChartData} />
+              <HorizontalBarChart
+                title="Sales by age"
+                chart={horizontalBarChartData}
+              />
             </Grid>
             <Grid item xs={12} lg={4}>
               <SalesTable title="Sales by Country" rows={salesTableData} />
@@ -215,7 +235,7 @@ function Sales() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default Sales;
+export default Sales

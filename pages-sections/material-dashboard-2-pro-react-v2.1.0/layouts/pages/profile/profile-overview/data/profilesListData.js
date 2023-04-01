@@ -14,68 +14,68 @@ Coded by www.creative-tim.com
 */
 
 // Images
-import kal from "assets/images/kal-visuals-square.jpg";
-import marie from "assets/images/marie.jpg";
-import ivana from "assets/images/ivana-square.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
+import kal from 'public/img/material-dashboard-2-pro-react-v2.1.0/kal-visuals-square.jpg'
+import marie from 'public/img/material-dashboard-2-pro-react-v2.1.0/marie.jpg'
+import ivana from 'public/img/material-dashboard-2-pro-react-v2.1.0/ivana-square.jpg'
+import team3 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-3.jpg'
+import team4 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-4.jpg'
 
 const profilesListData = [
   {
-    image: kal,
-    name: "Sophie B.",
-    description: "Hi! I need more information..",
+    image: kal.src,
+    name: 'Sophie B.',
+    description: 'Hi! I need more information..',
     action: {
-      type: "internal",
-      route: "/pages/profile/profile-overview",
-      color: "info",
-      label: "reply",
+      type: 'internal',
+      route: '/pages/profile/profile-overview',
+      color: 'info',
+      label: 'reply',
     },
   },
   {
-    image: marie,
-    name: "Anne Marie",
-    description: "Awesome work, can you..",
+    image: marie.src,
+    name: 'Anne Marie',
+    description: 'Awesome work, can you..',
     action: {
-      type: "internal",
-      route: "/pages/profile/profile-overview",
-      color: "info",
-      label: "reply",
+      type: 'internal',
+      route: '/pages/profile/profile-overview',
+      color: 'info',
+      label: 'reply',
     },
   },
   {
-    image: ivana,
-    name: "Ivanna",
-    description: "About files I can..",
+    image: ivana.src,
+    name: 'Ivanna',
+    description: 'About files I can..',
     action: {
-      type: "internal",
-      route: "/pages/profile/profile-overview",
-      color: "info",
-      label: "reply",
+      type: 'internal',
+      route: '/pages/profile/profile-overview',
+      color: 'info',
+      label: 'reply',
     },
   },
   {
-    image: team4,
-    name: "Peterson",
-    description: "Have a great afternoon..",
+    image: team4.src,
+    name: 'Peterson',
+    description: 'Have a great afternoon..',
     action: {
-      type: "internal",
-      route: "/pages/profile/profile-overview",
-      color: "info",
-      label: "reply",
+      type: 'internal',
+      route: '/pages/profile/profile-overview',
+      color: 'info',
+      label: 'reply',
     },
   },
   {
-    image: team3,
-    name: "Nick Daniel",
-    description: "Hi! I need more information..",
+    image: team3.src,
+    name: 'Nick Daniel',
+    description: 'Hi! I need more information..',
     action: {
-      type: "internal",
-      route: "/pages/profile/profile-overview",
-      color: "info",
-      label: "reply",
+      type: 'internal',
+      route: '/pages/profile/profile-overview',
+      color: 'info',
+      label: 'reply',
     },
   },
-];
+]
 
-export default profilesListData;
+export default profilesListData

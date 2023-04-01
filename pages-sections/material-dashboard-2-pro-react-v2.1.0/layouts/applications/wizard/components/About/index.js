@@ -14,21 +14,21 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
-import Tooltip from "@mui/material/Tooltip";
+import Grid from '@mui/material/Grid'
+import Icon from '@mui/material/Icon'
+import Tooltip from '@mui/material/Tooltip'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDAvatar from "components/MDAvatar";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDAvatar from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDAvatar'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Wizard application components
-import FormField from "layouts/applications/wizard/components/FormField";
+import FormField from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/applications/wizard/components/FormField'
 
 // Images
-import team2 from "assets/images/team-2.jpg";
+import team2 from 'public/img/material-dashboard-2-pro-react-v2.1.0//team-2.jpg'
 
 function About() {
   return (
@@ -40,18 +40,35 @@ function About() {
           </MDTypography>
         </MDBox>
         <MDTypography variant="body2" color="text">
-          Let us know your name and email address. Use an address you don&apos;t mind other users
-          contacting you at
+          Let us know your name and email address. Use an address you don&apos;t
+          mind other users contacting you at
         </MDTypography>
       </MDBox>
       <MDBox mt={2}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={4} container justifyContent="center">
             <MDBox position="relative" height="max-content" mx="auto">
-              <MDAvatar src={team2} alt="profile picture" size="xxl" variant="rounded" />
-              <MDBox alt="spotify logo" position="absolute" right={0} bottom={0} mr={-1} mb={-1}>
+              <MDAvatar
+                src={team2}
+                alt="profile picture"
+                size="xxl"
+                variant="rounded"
+              />
+              <MDBox
+                alt="spotify logo"
+                position="absolute"
+                right={0}
+                bottom={0}
+                mr={-1}
+                mb={-1}
+              >
                 <Tooltip title="Edit" placement="top">
-                  <MDButton variant="gradient" color="info" size="small" iconOnly>
+                  <MDButton
+                    variant="gradient"
+                    color="info"
+                    size="small"
+                    iconOnly
+                  >
                     <Icon>edit</Icon>
                   </MDButton>
                 </Tooltip>
@@ -72,7 +89,7 @@ function About() {
         </Grid>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
-export default About;
+export default About

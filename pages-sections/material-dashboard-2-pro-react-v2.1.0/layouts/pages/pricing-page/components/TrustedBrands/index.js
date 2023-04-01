@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Images
-import coinbase from "assets/images/logos/gray-logos/logo-coinbase.svg";
-import nasa from "assets/images/logos/gray-logos/logo-nasa.svg";
-import netflix from "assets/images/logos/gray-logos/logo-netflix.svg";
-import pinterest from "assets/images/logos/gray-logos/logo-pinterest.svg";
-import spotify from "assets/images/logos/gray-logos/logo-spotify.svg";
-import vodafone from "assets/images/logos/gray-logos/logo-vodafone.svg";
+import coinbase from 'public/img/material-dashboard-2-pro-react-v2.1.0/logos/gray-logos/logo-coinbase.svg'
+import nasa from 'public/img/material-dashboard-2-pro-react-v2.1.0/logos/gray-logos/logo-nasa.svg'
+import netflix from 'public/img/material-dashboard-2-pro-react-v2.1.0/logos/gray-logos/logo-netflix.svg'
+import pinterest from 'public/img/material-dashboard-2-pro-react-v2.1.0/logos/gray-logos/logo-pinterest.svg'
+import spotify from 'public/img/material-dashboard-2-pro-react-v2.1.0/logos/gray-logos/logo-spotify.svg'
+import vodafone from 'public/img/material-dashboard-2-pro-react-v2.1.0/logos/gray-logos/logo-vodafone.svg'
 
 function PricingCards() {
   return (
@@ -43,7 +43,7 @@ function PricingCards() {
               component="img"
               src={coinbase}
               alt="coinbase"
-              width={{ xs: "100%", xl: "125%" }}
+              width={{ xs: '100%', xl: '125%' }}
               opacity={0.9}
               mb={3}
             />
@@ -53,7 +53,7 @@ function PricingCards() {
               component="img"
               src={nasa}
               alt="nasa"
-              width={{ xs: "100%", xl: "125%" }}
+              width={{ xs: '100%', xl: '125%' }}
               opacity={0.9}
               mb={3}
             />
@@ -63,7 +63,7 @@ function PricingCards() {
               component="img"
               src={netflix}
               alt="netflix"
-              width={{ xs: "100%", xl: "125%" }}
+              width={{ xs: '100%', xl: '125%' }}
               opacity={0.9}
               mb={3}
             />
@@ -73,7 +73,7 @@ function PricingCards() {
               component="img"
               src={pinterest}
               alt="pinterest"
-              width={{ xs: "100%", xl: "125%" }}
+              width={{ xs: '100%', xl: '125%' }}
               opacity={0.9}
               mb={3}
             />
@@ -83,7 +83,7 @@ function PricingCards() {
               component="img"
               src={spotify}
               alt="spotify"
-              width={{ xs: "100%", xl: "125%" }}
+              width={{ xs: '100%', xl: '125%' }}
               opacity={0.9}
               mb={3}
             />
@@ -93,7 +93,7 @@ function PricingCards() {
               component="img"
               src={vodafone}
               alt="vodafone"
-              width={{ xs: "100%", xl: "125%" }}
+              width={{ xs: '100%', xl: '125%' }}
               opacity={0.9}
               mb={3}
             />
@@ -101,7 +101,7 @@ function PricingCards() {
         </Grid>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
-export default PricingCards;
+export default PricingCards

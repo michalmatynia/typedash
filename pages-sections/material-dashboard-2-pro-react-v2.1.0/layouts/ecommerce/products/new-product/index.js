@@ -13,57 +13,57 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
-import Card from "@mui/material/Card";
+import Grid from '@mui/material/Grid'
+import Stepper from '@mui/material/Stepper'
+import Step from '@mui/material/Step'
+import StepLabel from '@mui/material/StepLabel'
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDButton from "components/MDButton";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
 
 // NewProduct page components
-import ProductInfo from "layouts/ecommerce/products/new-product/components/ProductInfo";
-import Media from "layouts/ecommerce/products/new-product/components/Media";
-import Socials from "layouts/ecommerce/products/new-product/components/Socials";
-import Pricing from "layouts/ecommerce/products/new-product/components/Pricing";
+import ProductInfo from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/new-product/components/ProductInfo'
+import Media from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/new-product/components/Media'
+import Socials from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/new-product/components/Socials'
+import Pricing from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/new-product/components/Pricing'
 
 function getSteps() {
-  return ["1. Product Info", "2. Media", "3. Social", "4. Pricing"];
+  return ['1. Product Info', '2. Media', '3. Social', '4. Pricing']
 }
 
 function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
-      return <ProductInfo />;
+      return <ProductInfo />
     case 1:
-      return <Media />;
+      return <Media />
     case 2:
-      return <Socials />;
+      return <Socials />
     case 3:
-      return <Pricing />;
+      return <Pricing />
     default:
-      return null;
+      return null
   }
 }
 
 function NewProduct() {
-  const [activeStep, setActiveStep] = useState(0);
-  const steps = getSteps();
-  const isLastStep = activeStep === steps.length - 1;
+  const [activeStep, setActiveStep] = useState(0)
+  const steps = getSteps()
+  const isLastStep = activeStep === steps.length - 1
 
-  const handleNext = () => setActiveStep(activeStep + 1);
-  const handleBack = () => setActiveStep(activeStep - 1);
+  const handleNext = () => setActiveStep(activeStep + 1)
+  const handleBack = () => setActiveStep(activeStep - 1)
 
   return (
     <DashboardLayout>
@@ -94,11 +94,20 @@ function NewProduct() {
               <MDBox p={2}>
                 <MDBox>
                   {getStepContent(activeStep)}
-                  <MDBox mt={3} width="100%" display="flex" justifyContent="space-between">
+                  <MDBox
+                    mt={3}
+                    width="100%"
+                    display="flex"
+                    justifyContent="space-between"
+                  >
                     {activeStep === 0 ? (
                       <MDBox />
                     ) : (
-                      <MDButton variant="gradient" color="light" onClick={handleBack}>
+                      <MDButton
+                        variant="gradient"
+                        color="light"
+                        onClick={handleBack}
+                      >
                         back
                       </MDButton>
                     )}
@@ -107,7 +116,7 @@ function NewProduct() {
                       color="dark"
                       onClick={!isLastStep ? handleNext : undefined}
                     >
-                      {isLastStep ? "send" : "next"}
+                      {isLastStep ? 'send' : 'next'}
                     </MDButton>
                   </MDBox>
                 </MDBox>
@@ -118,7 +127,7 @@ function NewProduct() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default NewProduct;
+export default NewProduct

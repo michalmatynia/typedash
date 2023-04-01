@@ -13,25 +13,25 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
+import Grid from '@mui/material/Grid'
+import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 function Account() {
-  const [design, setDesign] = useState(false);
-  const [code, setCode] = useState(false);
-  const [develop, setDevelop] = useState(false);
+  const [design, setDesign] = useState(false)
+  const [code, setCode] = useState(false)
+  const [develop, setDevelop] = useState(false)
 
-  const handleSetDesign = () => setDesign(!design);
-  const handleSetCode = () => setCode(!code);
-  const handleSetDevelop = () => setDevelop(!develop);
+  const handleSetDesign = () => setDesign(!design)
+  const handleSetCode = () => setCode(!code)
+  const handleSetDevelop = () => setDevelop(!develop)
 
   const customButtonStyles = ({
     functions: { pxToRem, rgba },
@@ -45,21 +45,21 @@ function Account() {
     mb: 1,
     ml: 0.5,
 
-    "&.MuiButton-contained, &.MuiButton-contained:hover": {
-      boxShadow: "none",
+    '&.MuiButton-contained, &.MuiButton-contained:hover': {
+      boxShadow: 'none',
       border: `${borderWidth[2]} solid ${transparent.main}`,
     },
 
-    "&:hover": {
+    '&:hover': {
       backgroundColor: `${transparent.main} !important`,
       border: `${borderWidth[2]} solid ${info.main} !important`,
       color: rgba(info.main, 0.75),
     },
 
-    "& .material-icons-round": {
-      fontSize: `${size["3xl"]} !important`,
+    '& .material-icons-round': {
+      fontSize: `${size['3xl']} !important`,
     },
-  });
+  })
 
   return (
     <MDBox>
@@ -70,7 +70,8 @@ function Account() {
           </MDTypography>
         </MDBox>
         <MDTypography variant="body2" color="text">
-          Give us more details about you. What do you enjoy doing in your spare time?
+          Give us more details about you. What do you enjoy doing in your spare
+          time?
         </MDTypography>
       </MDBox>
       <MDBox mt={2}>
@@ -79,11 +80,11 @@ function Account() {
             <MDBox textAlign="center">
               <MDButton
                 color="info"
-                variant={design ? "contained" : "outlined"}
+                variant={design ? 'contained' : 'outlined'}
                 onClick={handleSetDesign}
                 sx={customButtonStyles}
               >
-                <Icon sx={{ color: design ? "white" : "inherit" }}>brush</Icon>
+                <Icon sx={{ color: design ? 'white' : 'inherit' }}>brush</Icon>
               </MDButton>
               <MDTypography variant="h6" sx={{ mt: 1 }}>
                 Design
@@ -94,11 +95,13 @@ function Account() {
             <MDBox textAlign="center">
               <MDButton
                 color="info"
-                variant={code ? "contained" : "outlined"}
+                variant={code ? 'contained' : 'outlined'}
                 onClick={handleSetCode}
                 sx={customButtonStyles}
               >
-                <Icon sx={{ color: design ? "white" : "inherit" }}>integration_instructions</Icon>
+                <Icon sx={{ color: design ? 'white' : 'inherit' }}>
+                  integration_instructions
+                </Icon>
               </MDButton>
               <MDTypography variant="h6" sx={{ mt: 1 }}>
                 Code
@@ -109,11 +112,13 @@ function Account() {
             <MDBox textAlign="center">
               <MDButton
                 color="info"
-                variant={develop ? "contained" : "outlined"}
+                variant={develop ? 'contained' : 'outlined'}
                 onClick={handleSetDevelop}
                 sx={customButtonStyles}
               >
-                <Icon sx={{ color: design ? "white" : "inherit" }}>developer_mode</Icon>
+                <Icon sx={{ color: design ? 'white' : 'inherit' }}>
+                  developer_mode
+                </Icon>
               </MDButton>
               <MDTypography variant="h6" sx={{ mt: 1 }}>
                 Develop
@@ -123,7 +128,7 @@ function Account() {
         </Grid>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
-export default Account;
+export default Account

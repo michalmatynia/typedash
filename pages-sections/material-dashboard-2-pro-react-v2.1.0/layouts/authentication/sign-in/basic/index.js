@@ -13,41 +13,42 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+// import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Switch from "@mui/material/Switch";
-import Grid from "@mui/material/Grid";
-import MuiLink from "@mui/material/Link";
+import Card from '@mui/material/Card'
+import Switch from '@mui/material/Switch'
+import Grid from '@mui/material/Grid'
+import MuiLink from '@mui/material/Link'
 
 // @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import GoogleIcon from "@mui/icons-material/Google";
+import FacebookIcon from '@mui/icons-material/Facebook'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import GoogleIcon from '@mui/icons-material/Google'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDInput from "components/MDInput";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDInput from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDInput'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Authentication layout components
-import BasicLayout from "layouts/authentication/components/BasicLayout";
+import BasicLayout from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/authentication/components/BasicLayout'
 
 // Images
-import bgImage from "assets/images/bg-sign-in-basic.jpeg";
+import bgImage from 'public/img/material-dashboard-2-pro-react-v2.1.0/bg-sign-in-basic.jpeg'
 
 function Basic() {
-  const [rememberMe, setRememberMe] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false)
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  const handleSetRememberMe = () => setRememberMe(!rememberMe)
 
   return (
-    <BasicLayout image={bgImage}>
+    <BasicLayout image={bgImage.src}>
       <Card>
         <MDBox
           variant="gradient"
@@ -63,19 +64,39 @@ function Basic() {
           <MDTypography variant="h4" fontWeight="medium" color="white" mt={1}>
             Sign in
           </MDTypography>
-          <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
+          <Grid
+            container
+            spacing={3}
+            justifyContent="center"
+            sx={{ mt: 1, mb: 2 }}
+          >
             <Grid item xs={2}>
-              <MDTypography component={MuiLink} href="#" variant="body1" color="white">
+              <MDTypography
+                component={MuiLink}
+                href="#"
+                variant="body1"
+                color="white"
+              >
                 <FacebookIcon color="inherit" />
               </MDTypography>
             </Grid>
             <Grid item xs={2}>
-              <MDTypography component={MuiLink} href="#" variant="body1" color="white">
+              <MDTypography
+                component={MuiLink}
+                href="#"
+                variant="body1"
+                color="white"
+              >
                 <GitHubIcon color="inherit" />
               </MDTypography>
             </Grid>
             <Grid item xs={2}>
-              <MDTypography component={MuiLink} href="#" variant="body1" color="white">
+              <MDTypography
+                component={MuiLink}
+                href="#"
+                variant="body1"
+                color="white"
+              >
                 <GoogleIcon color="inherit" />
               </MDTypography>
             </Grid>
@@ -96,7 +117,7 @@ function Basic() {
                 fontWeight="regular"
                 color="text"
                 onClick={handleSetRememberMe}
-                sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+                sx={{ cursor: 'pointer', userSelect: 'none', ml: -1 }}
               >
                 &nbsp;&nbsp;Remember me
               </MDTypography>
@@ -108,10 +129,10 @@ function Basic() {
             </MDBox>
             <MDBox mt={3} mb={1} textAlign="center">
               <MDTypography variant="button" color="text">
-                Don&apos;t have an account?{" "}
+                Don&apos;t have an account?{' '}
                 <MDTypography
                   component={Link}
-                  to="/authentication/sign-up/cover"
+                  href="/authentication/sign-up/cover"
                   variant="button"
                   color="info"
                   fontWeight="medium"
@@ -125,7 +146,7 @@ function Basic() {
         </MDBox>
       </Card>
     </BasicLayout>
-  );
+  )
 }
 
-export default Basic;
+export default Basic

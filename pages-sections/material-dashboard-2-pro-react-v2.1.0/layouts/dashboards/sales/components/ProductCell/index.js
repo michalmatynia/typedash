@@ -14,12 +14,12 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDAvatar from "components/MDAvatar";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDAvatar from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDAvatar'
 
 function ProductCell({ image, name, orders }) {
   return (
@@ -32,14 +32,19 @@ function ProductCell({ image, name, orders }) {
           {name}
         </MDTypography>
         <MDTypography variant="button" fontWeight="regular" color="secondary">
-          <MDTypography component="span" variant="button" fontWeight="regular" color="success">
+          <MDTypography
+            component="span"
+            variant="button"
+            fontWeight="regular"
+            color="success"
+          >
             {orders}
-          </MDTypography>{" "}
+          </MDTypography>{' '}
           orders
         </MDTypography>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
 // Typechecking props for the ProductCell
@@ -47,6 +52,6 @@ ProductCell.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   orders: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-};
+}
 
-export default ProductCell;
+export default ProductCell

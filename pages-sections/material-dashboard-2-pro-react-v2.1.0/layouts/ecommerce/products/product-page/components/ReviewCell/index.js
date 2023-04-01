@@ -14,13 +14,13 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDTypography from "components/MDTypography";
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 function ReviewCell({ rating }) {
   const ratings = {
@@ -94,18 +94,18 @@ function ReviewCell({ rating }) {
       <Icon key={4}>star</Icon>,
       <Icon key={5}>star</Icon>,
     ],
-  };
+  }
 
   return (
     <MDTypography variant="h4" color="text">
       {ratings[rating]}
     </MDTypography>
-  );
+  )
 }
 
 // Typechecking props for the ReviewCell
 ReviewCell.propTypes = {
   rating: PropTypes.number.isRequired,
-};
+}
 
-export default ReviewCell;
+export default ReviewCell

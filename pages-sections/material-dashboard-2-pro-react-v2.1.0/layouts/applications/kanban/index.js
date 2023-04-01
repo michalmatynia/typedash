@@ -13,50 +13,51 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+// import { useState } from 'react'
 
 // @asseinfo/react-kanban components
-import Board from "@asseinfo/react-kanban";
+// import Board from '@asseinfo/react-kanban'
 
 // react-html-parser components
-import parse from "html-react-parser";
+// import parse from 'html-react-parser'
 
 // uuid is a library for generating unique id
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from 'uuid'
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+// import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDButton from "components/MDButton";
-import MDTypography from "components/MDTypography";
-import MDInput from "components/MDInput";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+// import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
+// import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+// import MDInput from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDInput'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
 
 // Kanban application components
-import Header from "layouts/applications/kanban/components/Header";
+import Header from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/applications/kanban/components/Header'
 
 // Data
-import boards from "layouts/applications/kanban/data";
+// import boards from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/applications/kanban/data'
 
 // Material Dashboard 2 PRO React context
-import { useMaterialUIController } from "context";
+import { useMaterialUIController } from 'contexts/material-dashboard-2-pro-react-v2.1.0/context'
 
 function Kanban() {
-  const [controller] = useMaterialUIController();
-  const { darkMode } = controller;
+  const [controller] = useMaterialUIController()
+  const { darkMode } = controller
 
-  const [newCardForm, setNewCardForm] = useState(false);
-  const [formValue, setFormValue] = useState("");
+  // const [newCardForm, setNewCardForm] = useState(false)
+  // const [formValue, setFormValue] = useState('')
 
-  const openNewCardForm = (event, id) => setNewCardForm(id);
-  const closeNewCardForm = () => setNewCardForm(false);
-  const handeSetFormValue = ({ currentTarget }) => setFormValue(currentTarget.value);
+  // const openNewCardForm = (event, id) => setNewCardForm(id)
+  // const closeNewCardForm = () => setNewCardForm(false)
+  // const handeSetFormValue = ({ currentTarget }) =>
+  //   setFormValue(currentTarget.value)
 
   return (
     <DashboardLayout>
@@ -73,7 +74,7 @@ function Kanban() {
             functions: { pxToRem },
             borders: { borderRadius },
           }) => ({
-            "& .react-kanban-column": {
+            '& .react-kanban-column': {
               backgroundColor: darkMode ? background.card : light.main,
               width: pxToRem(450),
               margin: `0 ${pxToRem(10)}`,
@@ -82,18 +83,27 @@ function Kanban() {
             },
           })}
         >
-          <Board
+          {/* <Board
             initialBoard={boards}
             allowAddCard
             allowAddColumn
             renderColumnHeader={({ id, title }, { addCard }) => (
               <>
-                <MDBox display="flex" justifyContent="space-between" alignItems="center" mb={3}>
+                <MDBox
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  mb={3}
+                >
                   <MDTypography variant="h6">{title}</MDTypography>
-                  <MDButton size="small" iconOnly onClick={(event) => openNewCardForm(event, id)}>
+                  <MDButton
+                    size="small"
+                    iconOnly
+                    onClick={(event) => openNewCardForm(event, id)}
+                  >
                     <Icon
                       sx={{
-                        fontWeight: "bold",
+                        fontWeight: 'bold',
                         color: ({ palette: { dark } }) => dark.main,
                       }}
                     >
@@ -116,8 +126,8 @@ function Kanban() {
                         color="success"
                         size="small"
                         onClick={() => {
-                          addCard({ id: uuidv4(), template: formValue });
-                          setFormValue("");
+                          addCard({ id: uuidv4(), template: formValue })
+                          setFormValue('')
                         }}
                       >
                         add
@@ -143,7 +153,7 @@ function Kanban() {
                 dragging={dragging.toString() || undefined}
                 display="block"
                 width="calc(450px - 40px)"
-                bgColor={darkMode ? "transparent" : "white"}
+                bgColor={darkMode ? 'transparent' : 'white'}
                 color="text"
                 borderRadius="xl"
                 mt={2.5}
@@ -156,16 +166,16 @@ function Kanban() {
                   fontSize: ({ typography: { size } }) => size.md,
                 }}
               >
-                {typeof template === "string" ? parse(template) : template}
+                {typeof template === 'string' ? parse(template) : template}
               </MDBox>
             )}
             onCardNew={() => null}
-          />
+          /> */}
         </MDBox>
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default Kanban;
+export default Kanban

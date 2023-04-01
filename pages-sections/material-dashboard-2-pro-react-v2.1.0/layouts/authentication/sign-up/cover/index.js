@@ -14,27 +14,28 @@ Coded by www.creative-tim.com
 */
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+// import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Checkbox from "@mui/material/Checkbox";
+import Card from '@mui/material/Card'
+import Checkbox from '@mui/material/Checkbox'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDInput from "components/MDInput";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDInput from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDInput'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Authentication layout components
-import CoverLayout from "layouts/authentication/components/CoverLayout";
+import CoverLayout from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/authentication/components/CoverLayout'
 
 // Images
-import bgImage from "assets/images/bg-sign-up-cover.jpeg";
+import bgImage from 'public/img/material-dashboard-2-pro-react-v2.1.0/bg-sign-up-cover.jpeg'
 
 function Cover() {
   return (
-    <CoverLayout image={bgImage}>
+    <CoverLayout image={bgImage.src}>
       <Card>
         <MDBox
           variant="gradient"
@@ -60,10 +61,20 @@ function Cover() {
               <MDInput type="text" label="Name" variant="standard" fullWidth />
             </MDBox>
             <MDBox mb={2}>
-              <MDInput type="email" label="Email" variant="standard" fullWidth />
+              <MDInput
+                type="email"
+                label="Email"
+                variant="standard"
+                fullWidth
+              />
             </MDBox>
             <MDBox mb={2}>
-              <MDInput type="password" label="Password" variant="standard" fullWidth />
+              <MDInput
+                type="password"
+                label="Password"
+                variant="standard"
+                fullWidth
+              />
             </MDBox>
             <MDBox display="flex" alignItems="center" ml={-1}>
               <Checkbox />
@@ -71,7 +82,7 @@ function Cover() {
                 variant="button"
                 fontWeight="regular"
                 color="text"
-                sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+                sx={{ cursor: 'pointer', userSelect: 'none', ml: -1 }}
               >
                 &nbsp;&nbsp;I agree the&nbsp;
               </MDTypography>
@@ -93,7 +104,7 @@ function Cover() {
             </MDBox>
             <MDBox mt={3} mb={1} textAlign="center">
               <MDTypography variant="button" color="text">
-                Already have an account?{" "}
+                Already have an account?{' '}
                 <MDTypography
                   component={Link}
                   to="/authentication/sign-in/cover"
@@ -110,7 +121,7 @@ function Cover() {
         </MDBox>
       </Card>
     </CoverLayout>
-  );
+  )
 }
 
-export default Cover;
+export default Cover

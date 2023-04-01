@@ -14,21 +14,33 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDBadge from "components/MDBadge";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDBadge from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBadge'
 
 function FullBody() {
   return (
-    <Card sx={{ height: "100%" }}>
-      <MDBox display="flex" justifyContent="space-between" alignItems="center" pt={3} mb={2} px={3}>
+    <Card sx={{ height: '100%' }}>
+      <MDBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={3}
+        mb={2}
+        px={3}
+      >
         <MDTypography variant="body2" color="text">
           جسم كامل
         </MDTypography>
-        <MDBadge variant="contained" color="info" badgeContent="معتدل" container />
+        <MDBadge
+          variant="contained"
+          color="info"
+          badgeContent="معتدل"
+          container
+        />
       </MDBox>
       <MDBox pb={3} px={3}>
         <MDTypography variant="body2" color="text">
@@ -36,7 +48,7 @@ function FullBody() {
         </MDTypography>
       </MDBox>
     </Card>
-  );
+  )
 }
 
-export default FullBody;
+export default FullBody

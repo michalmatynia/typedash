@@ -29,7 +29,7 @@ function configs(labels, datasets) {
       },
       interaction: {
         intersect: false,
-        mode: "index",
+        mode: 'index',
       },
       scales: {
         y: {
@@ -56,7 +56,7 @@ function configs(labels, datasets) {
         },
       },
     },
-  };
+  }
 }
 
-export default configs;
+export default configs

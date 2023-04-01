@@ -14,20 +14,26 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Billing page components
-import Invoice from "layouts/pages/account/billing/components/Invoice";
+import Invoice from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/billing/components/Invoice'
 
 function Invoices() {
   return (
-    <Card sx={{ height: "100%" }}>
-      <MDBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
+    <Card sx={{ height: '100%' }}>
+      <MDBox
+        pt={2}
+        px={2}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
         <MDTypography variant="h6" fontWeight="medium">
           Invoices
         </MDTypography>
@@ -41,11 +47,16 @@ function Invoices() {
           <Invoice date="February, 10, 2021" id="#RV-126749" price="$250" />
           <Invoice date="April, 05, 2020" id="#QW-103578" price="$120" />
           <Invoice date="June, 25, 2019" id="#MS-415646" price="$180" />
-          <Invoice date="March, 01, 2019" id="#AR-803481" price="$300" noGutter />
+          <Invoice
+            date="March, 01, 2019"
+            id="#AR-803481"
+            price="$300"
+            noGutter
+          />
         </MDBox>
       </MDBox>
     </Card>
-  );
+  )
 }
 
-export default Invoices;
+export default Invoices

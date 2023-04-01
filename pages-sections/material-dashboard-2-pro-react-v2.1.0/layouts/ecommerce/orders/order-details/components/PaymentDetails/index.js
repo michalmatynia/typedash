@@ -14,22 +14,22 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Icon from "@mui/material/Icon";
-import Tooltip from "@mui/material/Tooltip";
+import Icon from '@mui/material/Icon'
+import Tooltip from '@mui/material/Tooltip'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Material Dashboard 2 PRO React base styles
-import borders from "assets/theme/base/borders";
+import borders from 'themes/material-dashboard-2-pro-react-v2.1.0/theme/base/borders'
 
 // Images
-import masterCardLogo from "assets/images/logos/mastercard.png";
+import masterCardLogo from 'public/img/material-dashboard-2-pro-react-v2.1.0/logos/mastercard.png'
 
 function PaymentDetails() {
-  const { borderWidth, borderColor } = borders;
+  const { borderWidth, borderColor } = borders
 
   return (
     <>
@@ -45,20 +45,32 @@ function PaymentDetails() {
         p={3}
         mt={2}
       >
-        <MDBox component="img" src={masterCardLogo} alt="master card" width="10%" mr={2} />
+        <MDBox
+          component="img"
+          src={masterCardLogo.src}
+          alt="master card"
+          width="10%"
+          mr={2}
+        />
         <MDTypography variant="h6" fontWeight="medium">
           ****&nbsp;&nbsp;****&nbsp;&nbsp;****&nbsp;&nbsp;7852
         </MDTypography>
         <MDBox ml="auto" lineHeight={0}>
           <Tooltip title="We do not store card details" placement="bottom">
-            <MDButton variant="outlined" color="secondary" size="small" iconOnly circular>
-              <Icon sx={{ cursor: "pointer" }}>priority_high</Icon>
+            <MDButton
+              variant="outlined"
+              color="secondary"
+              size="small"
+              iconOnly
+              circular
+            >
+              <Icon sx={{ cursor: 'pointer' }}>priority_high</Icon>
             </MDButton>
           </Tooltip>
         </MDBox>
       </MDBox>
     </>
-  );
+  )
 }
 
-export default PaymentDetails;
+export default PaymentDetails

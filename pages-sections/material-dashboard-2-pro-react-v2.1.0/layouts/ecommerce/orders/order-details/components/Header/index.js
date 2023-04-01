@@ -14,9 +14,9 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 function Header() {
   return (
@@ -31,7 +31,12 @@ function Header() {
           Order no. <b>241342</b> from
           <b>23.02.2021</b>
         </MDTypography>
-        <MDTypography component="p" variant="button" fontWeight="regular" color="text">
+        <MDTypography
+          component="p"
+          variant="button"
+          fontWeight="regular"
+          color="text"
+        >
           Code: <b>KF332</b>
         </MDTypography>
       </MDBox>
@@ -39,7 +44,7 @@ function Header() {
         invoice
       </MDButton>
     </MDBox>
-  );
+  )
 }
 
-export default Header;
+export default Header

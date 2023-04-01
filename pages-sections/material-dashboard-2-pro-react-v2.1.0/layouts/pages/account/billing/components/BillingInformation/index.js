@@ -14,14 +14,14 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Billing page components
-import Bill from "layouts/pages/account/billing/components/Bill";
+import Bill from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/billing/components/Bill'
 
 function BillingInformation() {
   return (
@@ -55,7 +55,7 @@ function BillingInformation() {
         </MDBox>
       </MDBox>
     </Card>
-  );
+  )
 }
 
-export default BillingInformation;
+export default BillingInformation

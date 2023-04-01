@@ -13,34 +13,35 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+// import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Switch from "@mui/material/Switch";
+import Card from '@mui/material/Card'
+import Switch from '@mui/material/Switch'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDInput from "components/MDInput";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDInput from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDInput'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Authentication layout components
-import CoverLayout from "layouts/authentication/components/CoverLayout";
+import CoverLayout from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/authentication/components/CoverLayout'
 
 // Images
-import bgImage from "assets/images/bg-sign-in-cover.jpeg";
+import bgImage from 'public/img/material-dashboard-2-pro-react-v2.1.0/bg-sign-in-cover.jpeg'
 
 function Cover() {
-  const [rememberMe, setRememberMe] = useState(true);
+  const [rememberMe, setRememberMe] = useState(true)
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  const handleSetRememberMe = () => setRememberMe(!rememberMe)
 
   return (
-    <CoverLayout image={bgImage}>
+    <CoverLayout image={bgImage.src}>
       <Card>
         <MDBox
           variant="gradient"
@@ -89,7 +90,7 @@ function Cover() {
                 fontWeight="regular"
                 color="text"
                 onClick={handleSetRememberMe}
-                sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+                sx={{ cursor: 'pointer', userSelect: 'none', ml: -1 }}
               >
                 &nbsp;&nbsp;Remember me
               </MDTypography>
@@ -101,7 +102,7 @@ function Cover() {
             </MDBox>
             <MDBox mt={3} mb={1} textAlign="center">
               <MDTypography variant="button" color="text">
-                Don&apos;t have an account?{" "}
+                Don&apos;t have an account?{' '}
                 <MDTypography
                   component={Link}
                   to="/authentication/sign-up/cover"
@@ -118,7 +119,7 @@ function Cover() {
         </MDBox>
       </Card>
     </CoverLayout>
-  );
+  )
 }
 
-export default Cover;
+export default Cover

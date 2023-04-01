@@ -14,22 +14,22 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Images
-import productImage from "assets/images/products/product-11.jpg";
+import productImage from 'public/img/material-dashboard-2-pro-react-v2.1.0/products/product-11.jpg'
 
 function ProductImage() {
   return (
     <Card
       sx={{
-        "&:hover .card-header": {
-          transform: "translate3d(0, -50px, 0)",
+        '&:hover .card-header': {
+          transform: 'translate3d(0, -50px, 0)',
         },
       }}
     >
@@ -39,7 +39,7 @@ function ProductImage() {
         mt={-3}
         mx={2}
         className="card-header"
-        sx={{ transition: "transform 300ms cubic-bezier(0.34, 1.61, 0.7, 1)" }}
+        sx={{ transition: 'transform 300ms cubic-bezier(0.34, 1.61, 0.7, 1)' }}
       >
         <MDBox
           component="img"
@@ -76,12 +76,13 @@ function ProductImage() {
           Product Image
         </MDTypography>
         <MDTypography variant="body2" color="text" sx={{ mt: 1.5, mb: 1 }}>
-          The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to
-          &#8220;Naviglio&#8221; where you can enjoy the main night life in Barcelona.
+          The place is close to Barceloneta Beach and bus stop just 2 min by
+          walk and near to &#8220;Naviglio&#8221; where you can enjoy the main
+          night life in Barcelona.
         </MDTypography>
       </MDBox>
     </Card>
-  );
+  )
 }
 
-export default ProductImage;
+export default ProductImage

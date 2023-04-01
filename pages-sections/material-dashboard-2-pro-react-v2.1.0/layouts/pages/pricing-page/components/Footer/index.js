@@ -14,18 +14,18 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import PinterestIcon from "@mui/icons-material/Pinterest";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import FacebookIcon from '@mui/icons-material/Facebook'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import PinterestIcon from '@mui/icons-material/Pinterest'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 function Footer() {
   return (
@@ -120,14 +120,14 @@ function Footer() {
             </MDBox>
           </MDBox>
         </Grid>
-        <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
+        <Grid item xs={12} lg={8} sx={{ textAlign: 'center' }}>
           <MDTypography variant="body2" color="secondary">
             Copyright &copy; 2021 Material by Creative Tim.
           </MDTypography>
         </Grid>
       </Grid>
     </MDBox>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

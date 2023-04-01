@@ -14,32 +14,39 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDProgress from "components/MDProgress";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDProgress from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDProgress'
 
 // ProductPage page components
-import ProductCell from "layouts/ecommerce/products/product-page/components/ProductCell";
-import ReviewCell from "layouts/ecommerce/products/product-page/components/ReviewCell";
-import DefaultCell from "layouts/ecommerce/products/product-page/components/DefaultCell";
+import ProductCell from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/product-page/components/ProductCell'
+import ReviewCell from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/product-page/components/ReviewCell'
+import DefaultCell from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/product-page/components/DefaultCell'
 
 // Images
-import blackChair from "assets/images/ecommerce/black-chair.jpeg";
-import chairPink from "assets/images/ecommerce/chair-pink.jpeg";
-import chairSteel from "assets/images/ecommerce/chair-steel.jpeg";
-import chairWood from "assets/images/ecommerce/chair-wood.jpeg";
+import blackChair from 'public/img/material-dashboard-2-pro-react-v2.1.0/ecommerce/black-chair.jpeg'
+import chairPink from 'public/img/material-dashboard-2-pro-react-v2.1.0/ecommerce/chair-pink.jpeg'
+import chairSteel from 'public/img/material-dashboard-2-pro-react-v2.1.0/ecommerce/chair-steel.jpeg'
+import chairWood from 'public/img/material-dashboard-2-pro-react-v2.1.0/ecommerce/chair-wood.jpeg'
 
 const dataTableData = {
   columns: [
-    { Header: "product", accessor: "product", width: "50%" },
-    { Header: "price", accessor: "price", width: "10%" },
-    { Header: "review", accessor: "review", align: "center" },
-    { Header: "availability", accessor: "availability", align: "center", width: "40%" },
-    { Header: "id", accessor: "id", align: "center" },
+    { Header: 'product', accessor: 'product', width: '50%' },
+    { Header: 'price', accessor: 'price', width: '10%' },
+    { Header: 'review', accessor: 'review', align: 'center' },
+    {
+      Header: 'availability',
+      accessor: 'availability',
+      align: 'center',
+      width: '40%',
+    },
+    { Header: 'id', accessor: 'id', align: 'center' },
   ],
 
   rows: [
     {
-      product: <ProductCell image={blackChair} name="Christopher Knight Home" />,
+      product: (
+        <ProductCell image={blackChair} name="Christopher Knight Home" />
+      ),
       price: <DefaultCell>$89.53</DefaultCell>,
       review: <ReviewCell rating={4.5} />,
       availability: (
@@ -50,7 +57,9 @@ const dataTableData = {
       id: <DefaultCell>230019</DefaultCell>,
     },
     {
-      product: <ProductCell image={chairPink} name="Bar Height Swivel Barstool" />,
+      product: (
+        <ProductCell image={chairPink} name="Bar Height Swivel Barstool" />
+      ),
       price: <DefaultCell>$99.99</DefaultCell>,
       review: <ReviewCell rating={5} />,
       availability: (
@@ -61,7 +70,9 @@ const dataTableData = {
       id: <DefaultCell>87120</DefaultCell>,
     },
     {
-      product: <ProductCell image={chairSteel} name="Signature Design by Ashley" />,
+      product: (
+        <ProductCell image={chairSteel} name="Signature Design by Ashley" />
+      ),
       price: <DefaultCell>$129.00</DefaultCell>,
       review: <ReviewCell rating={4.5} />,
       availability: (
@@ -83,6 +94,6 @@ const dataTableData = {
       id: <DefaultCell>001992</DefaultCell>,
     },
   ],
-};
+}
 
-export default dataTableData;
+export default dataTableData

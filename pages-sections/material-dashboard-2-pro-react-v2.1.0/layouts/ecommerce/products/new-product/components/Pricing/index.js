@@ -14,16 +14,16 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Autocomplete from "@mui/material/Autocomplete";
+import Grid from '@mui/material/Grid'
+import Autocomplete from '@mui/material/Autocomplete'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDInput from "components/MDInput";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDInput from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDInput'
 
 // NewProduct page components
-import FormField from "layouts/ecommerce/products/new-product/components/FormField";
+import FormField from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/new-product/components/FormField'
 
 function Pricing() {
   return (
@@ -37,8 +37,10 @@ function Pricing() {
           <Grid item xs={12} sm={4} sx={{ mt: 2 }}>
             <Autocomplete
               defaultValue="USD"
-              options={["BTC", "CNY", "EUR", "GBP", "INR", "USD"]}
-              renderInput={(params) => <MDInput {...params} variant="standard" />}
+              options={['BTC', 'CNY', 'EUR', 'GBP', 'INR', 'USD']}
+              renderInput={(params) => (
+                <MDInput {...params} variant="standard" />
+              )}
             />
           </Grid>
           <Grid item xs={12} sm={5}>
@@ -50,21 +52,34 @@ function Pricing() {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <MDBox my={2} display="inline-block">
-              <MDTypography component="label" variant="button" fontWeight="regular" color="text">
+              <MDTypography
+                component="label"
+                variant="button"
+                fontWeight="regular"
+                color="text"
+              >
                 Tags
               </MDTypography>
             </MDBox>
             <Autocomplete
               multiple
-              defaultValue={["In Stock", "Out of Stock"]}
-              options={["Black Friday", "Expired", "Out of Stock", "In Stock", "Sale"]}
-              renderInput={(params) => <MDInput {...params} variant="standard" />}
+              defaultValue={['In Stock', 'Out of Stock']}
+              options={[
+                'Black Friday',
+                'Expired',
+                'Out of Stock',
+                'In Stock',
+                'Sale',
+              ]}
+              renderInput={(params) => (
+                <MDInput {...params} variant="standard" />
+              )}
             />
           </Grid>
         </Grid>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
-export default Pricing;
+export default Pricing

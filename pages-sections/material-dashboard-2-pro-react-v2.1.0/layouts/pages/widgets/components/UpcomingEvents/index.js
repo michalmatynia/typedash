@@ -14,18 +14,18 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React examples
-import DefaultItem from "examples/Items/DefaultItem";
+import DefaultItem from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Items/DefaultItem'
 
 function UpcomingEvents() {
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: '100%' }}>
       <MDBox pt={2} px={2} lineHeight={1}>
         <MDTypography variant="h6" fontWeight="medium">
           Upcoming events
@@ -59,7 +59,7 @@ function UpcomingEvents() {
         </MDBox>
       </MDBox>
     </Card>
-  );
+  )
 }
 
-export default UpcomingEvents;
+export default UpcomingEvents

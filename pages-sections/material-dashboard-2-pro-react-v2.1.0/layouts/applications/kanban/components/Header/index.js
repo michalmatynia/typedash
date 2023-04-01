@@ -14,34 +14,34 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
+import Divider from '@mui/material/Divider'
+import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDAvatar from "components/MDAvatar";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDAvatar from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDAvatar'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Image
-import team1 from "assets/images/team-1.jpg";
-import team2 from "assets/images/team-2.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
-import team5 from "assets/images/team-5.jpg";
+import team1 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-1.jpg'
+import team2 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-2.jpg'
+import team3 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-3.jpg'
+import team4 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-4.jpg'
+import team5 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-5.jpg'
 
 function Header() {
   const avatarStyles = {
     border: ({ borders: { borderWidth }, palette: { white } }) =>
       `${borderWidth[2]} solid ${white.main}`,
-    cursor: "pointer",
-    position: "relative",
+    cursor: 'pointer',
+    position: 'relative',
     ml: -1.5,
 
-    "&:hover, &:focus": {
-      zIndex: "10",
+    '&:hover, &:focus': {
+      zIndex: '10',
     },
-  };
+  }
 
   return (
     <MDBox display="flex" alignItems="center">
@@ -52,11 +52,11 @@ function Header() {
           </MDTypography>
         </MDBox>
         <MDBox display="flex">
-          <MDAvatar src={team1} alt="team-1" size="sm" sx={avatarStyles} />
-          <MDAvatar src={team2} alt="team-1" size="sm" sx={avatarStyles} />
-          <MDAvatar src={team3} alt="team-1" size="sm" sx={avatarStyles} />
-          <MDAvatar src={team4} alt="team-1" size="sm" sx={avatarStyles} />
-          <MDAvatar src={team5} alt="team-1" size="sm" sx={avatarStyles} />
+          <MDAvatar src={team1.src} alt="team-1" size="sm" sx={avatarStyles} />
+          <MDAvatar src={team2.src} alt="team-1" size="sm" sx={avatarStyles} />
+          <MDAvatar src={team3.src} alt="team-1" size="sm" sx={avatarStyles} />
+          <MDAvatar src={team4.src} alt="team-1" size="sm" sx={avatarStyles} />
+          <MDAvatar src={team5.src} alt="team-1" size="sm" sx={avatarStyles} />
         </MDBox>
       </MDBox>
       <MDBox height="75%" alignSelf="flex-end">
@@ -64,11 +64,11 @@ function Header() {
       </MDBox>
       <MDBox pl={1}>
         <MDButton variant="gradient" color="info" iconOnly>
-          <Icon sx={{ fontWeight: "bold" }}>add</Icon>
+          <Icon sx={{ fontWeight: 'bold' }}>add</Icon>
         </MDButton>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
-export default Header;
+export default Header

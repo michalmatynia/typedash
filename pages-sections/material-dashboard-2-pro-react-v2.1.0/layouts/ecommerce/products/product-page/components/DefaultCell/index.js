@@ -14,22 +14,22 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Material Dashboard 2 PRO React components
-import MDTypography from "components/MDTypography";
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 function DefaultCell({ children }) {
   return (
     <MDTypography variant="button" color="secondary">
       {children}
     </MDTypography>
-  );
+  )
 }
 
 // Typechecking props for the DefaultCell
 DefaultCell.propTypes = {
   children: PropTypes.string.isRequired,
-};
+}
 
-export default DefaultCell;
+export default DefaultCell

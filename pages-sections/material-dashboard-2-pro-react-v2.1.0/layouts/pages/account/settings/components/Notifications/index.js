@@ -14,18 +14,18 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Table from "@mui/material/Table";
-import TableRow from "@mui/material/TableRow";
-import TableBody from "@mui/material/TableBody";
-import Switch from "@mui/material/Switch";
+import Card from '@mui/material/Card'
+import Table from '@mui/material/Table'
+import TableRow from '@mui/material/TableRow'
+import TableBody from '@mui/material/TableBody'
+import Switch from '@mui/material/Switch'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Setting pages components
-import TableCell from "layouts/pages/account/settings/components/TableCell";
+import TableCell from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/TableCell'
 
 function Notifications() {
   return (
@@ -35,13 +35,13 @@ function Notifications() {
           <MDTypography variant="h5">Notifications</MDTypography>
         </MDBox>
         <MDTypography variant="button" color="text">
-          Choose how you receive notifications. These notification settings apply to the things
-          you’re watching.
+          Choose how you receive notifications. These notification settings
+          apply to the things you’re watching.
         </MDTypography>
       </MDBox>
       <MDBox pb={3} px={3}>
-        <MDBox minWidth="auto" sx={{ overflow: "scroll" }}>
-          <Table sx={{ minWidth: "36rem" }}>
+        <MDBox minWidth="auto" sx={{ overflow: 'scroll' }}>
+          <Table sx={{ minWidth: '36rem' }}>
             <MDBox component="thead">
               <TableRow>
                 <TableCell width="100%" padding={[1.5, 3, 1.5, 0.5]}>
@@ -62,10 +62,18 @@ function Notifications() {
               <TableRow>
                 <TableCell padding={[1, 1, 1, 0.5]}>
                   <MDBox lineHeight={1.4}>
-                    <MDTypography display="block" variant="button" fontWeight="regular">
+                    <MDTypography
+                      display="block"
+                      variant="button"
+                      fontWeight="regular"
+                    >
                       Mentions
                     </MDTypography>
-                    <MDTypography variant="caption" color="text" fontWeight="regular">
+                    <MDTypography
+                      variant="caption"
+                      color="text"
+                      fontWeight="regular"
+                    >
                       Notify when another user mentions you in a comment
                     </MDTypography>
                   </MDBox>
@@ -83,10 +91,18 @@ function Notifications() {
               <TableRow>
                 <TableCell padding={[1, 1, 1, 0.5]}>
                   <MDBox lineHeight={1.4}>
-                    <MDTypography display="block" variant="button" fontWeight="regular">
+                    <MDTypography
+                      display="block"
+                      variant="button"
+                      fontWeight="regular"
+                    >
                       Comments
                     </MDTypography>
-                    <MDTypography variant="caption" color="text" fontWeight="regular">
+                    <MDTypography
+                      variant="caption"
+                      color="text"
+                      fontWeight="regular"
+                    >
                       Notify when another user comments your item.
                     </MDTypography>
                   </MDBox>
@@ -104,10 +120,18 @@ function Notifications() {
               <TableRow>
                 <TableCell padding={[1, 1, 1, 0.5]}>
                   <MDBox lineHeight={1.4}>
-                    <MDTypography display="block" variant="button" fontWeight="regular">
+                    <MDTypography
+                      display="block"
+                      variant="button"
+                      fontWeight="regular"
+                    >
                       Follows
                     </MDTypography>
-                    <MDTypography variant="caption" color="text" fontWeight="regular">
+                    <MDTypography
+                      variant="caption"
+                      color="text"
+                      fontWeight="regular"
+                    >
                       Notify when another user follows you.
                     </MDTypography>
                   </MDBox>
@@ -143,7 +167,7 @@ function Notifications() {
         </MDBox>
       </MDBox>
     </Card>
-  );
+  )
 }
 
-export default Notifications;
+export default Notifications

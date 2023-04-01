@@ -13,67 +13,70 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Icon from "@mui/material/Icon";
+import Grid from '@mui/material/Grid'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import ComplexProjectCard from "examples/Cards/ProjectCards/ComplexProjectCard";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
+import ComplexProjectCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/ProjectCards/ComplexProjectCard'
 
 // Project page components
-import Header from "layouts/pages/profile/components/Header";
+import Header from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/profile/components/Header'
 
 // Images
-import team1 from "assets/images/team-1.jpg";
-import team2 from "assets/images/team-2.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
-import team5 from "assets/images/team-5.jpg";
-import logoSlack from "assets/images/small-logos/logo-slack.svg";
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
-import logoXD from "assets/images/small-logos/logo-xd.svg";
-import logoAsana from "assets/images/small-logos/logo-asana.svg";
-import logoInvision from "assets/images/small-logos/logo-invision.svg";
-import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
+import team1 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-1.jpg'
+import team2 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-2.jpg'
+import team3 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-3.jpg'
+import team4 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-4.jpg'
+import team5 from 'public/img/material-dashboard-2-pro-react-v2.1.0/team-5.jpg'
+import logoSlack from 'public/img/material-dashboard-2-pro-react-v2.1.0/small-logos/logo-slack.svg'
+import logoSpotify from 'public/img/material-dashboard-2-pro-react-v2.1.0/small-logos/logo-spotify.svg'
+import logoXD from 'public/img/material-dashboard-2-pro-react-v2.1.0/small-logos/logo-xd.svg'
+import logoAsana from 'public/img/material-dashboard-2-pro-react-v2.1.0/small-logos/logo-asana.svg'
+import logoInvision from 'public/img/material-dashboard-2-pro-react-v2.1.0/small-logos/logo-invision.svg'
+import logoAtlassian from 'public/img/material-dashboard-2-pro-react-v2.1.0/small-logos/logo-atlassian.svg'
 
 function AllProjects() {
   // ComplexProjectCard dropdown menu state
-  const [slackBotMenu, setSlackBotMenu] = useState(null);
-  const [premiumSupportMenu, setPremiumSupportMenu] = useState(null);
-  const [designToolsMenu, setDesignToolsMenu] = useState(null);
-  const [lookingGreatMenu, setLookingGreatMenu] = useState(null);
-  const [developerFirstMenu, setDeveloperFirstMenu] = useState(null);
+  const [slackBotMenu, setSlackBotMenu] = useState(null)
+  const [premiumSupportMenu, setPremiumSupportMenu] = useState(null)
+  const [designToolsMenu, setDesignToolsMenu] = useState(null)
+  const [lookingGreatMenu, setLookingGreatMenu] = useState(null)
+  const [developerFirstMenu, setDeveloperFirstMenu] = useState(null)
 
   // TeamProfileCard dropdown menu handlers
-  const openSlackBotMenu = (event) => setSlackBotMenu(event.currentTarget);
-  const closeSlackBotMenu = () => setSlackBotMenu(null);
-  const openPremiumSupportMenu = (event) => setPremiumSupportMenu(event.currentTarget);
-  const closePremiumSupportMenu = () => setPremiumSupportMenu(null);
-  const openDesignToolsMenu = (event) => setDesignToolsMenu(event.currentTarget);
-  const closeDesignToolsMenu = () => setDesignToolsMenu(null);
-  const openLookingGreatMenu = (event) => setLookingGreatMenu(event.currentTarget);
-  const closeLookingGreatMenu = () => setLookingGreatMenu(null);
-  const openDeveloperFirstMenu = (event) => setDeveloperFirstMenu(event.currentTarget);
-  const closeDeveloperFirstMenu = () => setDeveloperFirstMenu(null);
+  const openSlackBotMenu = (event) => setSlackBotMenu(event.currentTarget)
+  const closeSlackBotMenu = () => setSlackBotMenu(null)
+  const openPremiumSupportMenu = (event) =>
+    setPremiumSupportMenu(event.currentTarget)
+  const closePremiumSupportMenu = () => setPremiumSupportMenu(null)
+  const openDesignToolsMenu = (event) => setDesignToolsMenu(event.currentTarget)
+  const closeDesignToolsMenu = () => setDesignToolsMenu(null)
+  const openLookingGreatMenu = (event) =>
+    setLookingGreatMenu(event.currentTarget)
+  const closeLookingGreatMenu = () => setLookingGreatMenu(null)
+  const openDeveloperFirstMenu = (event) =>
+    setDeveloperFirstMenu(event.currentTarget)
+  const closeDeveloperFirstMenu = () => setDeveloperFirstMenu(null)
 
   // Dropdown menu template for the ComplexProjectCard
   const renderMenu = (state, close) => (
     <Menu
       anchorEl={state}
-      anchorOrigin={{ vertical: "top", horizontal: "left" }}
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={Boolean(state)}
       onClose={close}
       keepMounted
@@ -82,7 +85,7 @@ function AllProjects() {
       <MenuItem onClick={close}>Another action</MenuItem>
       <MenuItem onClick={close}>Something else here</MenuItem>
     </Menu>
-  );
+  )
 
   return (
     <DashboardLayout>
@@ -94,16 +97,19 @@ function AllProjects() {
         <Grid container alignItems="center">
           <Grid item xs={12} md={7}>
             <MDBox mb={1}>
-              <MDTypography variant="h5">Some of Our Awesome Projects</MDTypography>
+              <MDTypography variant="h5">
+                Some of Our Awesome Projects
+              </MDTypography>
             </MDBox>
             <MDBox mb={2}>
               <MDTypography variant="body2" color="text">
-                This is the paragraph where you can write more details about your projects. Keep you
-                user engaged by providing meaningful information.
+                This is the paragraph where you can write more details about
+                your projects. Keep you user engaged by providing meaningful
+                information.
               </MDTypography>
             </MDBox>
           </Grid>
-          <Grid item xs={12} md={5} sx={{ textAlign: "right" }}>
+          <Grid item xs={12} md={5} sx={{ textAlign: 'right' }}>
             <MDButton variant="gradient" color="info">
               <Icon>add</Icon>&nbsp; Add New
             </MDButton>
@@ -136,7 +142,10 @@ function AllProjects() {
                   members={[team1, team2, team3]}
                   dropdown={{
                     action: openPremiumSupportMenu,
-                    menu: renderMenu(premiumSupportMenu, closePremiumSupportMenu),
+                    menu: renderMenu(
+                      premiumSupportMenu,
+                      closePremiumSupportMenu
+                    ),
                   }}
                 />
               </MDBox>
@@ -181,7 +190,10 @@ function AllProjects() {
                   members={[team1, team2, team3, team4]}
                   dropdown={{
                     action: openDeveloperFirstMenu,
-                    menu: renderMenu(developerFirstMenu, closeDeveloperFirstMenu),
+                    menu: renderMenu(
+                      developerFirstMenu,
+                      closeDeveloperFirstMenu
+                    ),
                   }}
                 />
               </MDBox>
@@ -196,7 +208,10 @@ function AllProjects() {
                   members={[team1, team2, team3, team4]}
                   dropdown={{
                     action: openDeveloperFirstMenu,
-                    menu: renderMenu(developerFirstMenu, closeDeveloperFirstMenu),
+                    menu: renderMenu(
+                      developerFirstMenu,
+                      closeDeveloperFirstMenu
+                    ),
                   }}
                 />
               </MDBox>
@@ -206,7 +221,7 @@ function AllProjects() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default AllProjects;
+export default AllProjects

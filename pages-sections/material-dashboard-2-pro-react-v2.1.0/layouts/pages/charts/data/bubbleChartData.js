@@ -14,11 +14,11 @@ Coded by www.creative-tim.com
 */
 
 const bubbleChartData = {
-  labels: ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90"],
+  labels: ['0', '10', '20', '30', '40', '50', '60', '70', '80', '90'],
   datasets: [
     {
-      label: "Dataset 1",
-      color: "info",
+      label: 'Dataset 1',
+      color: 'info',
       data: [
         { x: 100, y: 0, r: 10 },
         { x: 60, y: 30, r: 20 },
@@ -29,8 +29,8 @@ const bubbleChartData = {
       ],
     },
     {
-      label: "Dataset 2",
-      color: "dark",
+      label: 'Dataset 2',
+      color: 'dark',
       data: [
         { x: 70, y: 40, r: 10 },
         { x: 30, y: 60, r: 20 },
@@ -41,6 +41,6 @@ const bubbleChartData = {
       ],
     },
   ],
-};
+}
 
-export default bubbleChartData;
+export default bubbleChartData

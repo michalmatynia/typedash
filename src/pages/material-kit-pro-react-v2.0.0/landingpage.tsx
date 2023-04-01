@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 
-import Page from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Authentication//SignIn/Illustration'
+import Page from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/applications/calendar/components/Header'
 
 // const dashboardRoutes = []
 

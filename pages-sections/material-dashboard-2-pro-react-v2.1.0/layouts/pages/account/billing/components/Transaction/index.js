@@ -14,15 +14,15 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 function Transaction({ color, icon, name, description, value }) {
   return (
@@ -31,7 +31,7 @@ function Transaction({ color, icon, name, description, value }) {
         <MDBox display="flex" alignItems="center">
           <MDBox mr={2}>
             <MDButton variant="outlined" color={color} iconOnly circular>
-              <Icon sx={{ fontWeight: "bold" }}>{icon}</Icon>
+              <Icon sx={{ fontWeight: 'bold' }}>{icon}</Icon>
             </MDButton>
           </MDBox>
           <MDBox display="flex" flexDirection="column">
@@ -43,30 +43,35 @@ function Transaction({ color, icon, name, description, value }) {
             </MDTypography>
           </MDBox>
         </MDBox>
-        <MDTypography variant="button" color={color} fontWeight="medium" textGradient>
+        <MDTypography
+          variant="button"
+          color={color}
+          fontWeight="medium"
+          textGradient
+        >
           {value}
         </MDTypography>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
 // Typechecking props of the Transaction
 Transaction.propTypes = {
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "light",
-    "dark",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'light',
+    'dark',
   ]).isRequired,
   icon: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-};
+}
 
-export default Transaction;
+export default Transaction

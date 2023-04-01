@@ -13,34 +13,34 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useRef, useEffect, useState, useMemo } from "react";
+import { useRef, useEffect, useState, useMemo } from 'react'
 
 // porp-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // react-chartjs-2 components
-import { Line } from "react-chartjs-2";
+import { Line } from 'react-chartjs-2'
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React helper functions
-import gradientChartLine from "assets/theme/functions/gradientChartLine";
+import gradientChartLine from 'themes/material-dashboard-2-pro-react-v2.1.0/theme/functions/gradientChartLine'
 
 // Chart configurations
-import configs from "layouts/pages/widgets/components/Chart/configs";
+import configs from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/components/Chart/configs'
 
 // Material Dashboard 2 PRO React base styles
-import colors from "assets/theme/base/colors";
+import colors from 'themes/material-dashboard-2-pro-react-v2.1.0/theme/base/colors'
 
 function Chart({ title, count, percentage, chart }) {
-  const chartRef = useRef(null);
-  const [chartData, setChartData] = useState({});
-  const { data, options } = chartData;
+  const chartRef = useRef(null)
+  const [chartData, setChartData] = useState({})
+  const { data, options } = chartData
 
   useEffect(() => {
     const chartDatasets = chart.datasets.map((dataset) => ({
@@ -56,34 +56,43 @@ function Chart({ title, count, percentage, chart }) {
         colors[dataset.color].main,
         0.02
       ),
-    }));
+    }))
 
-    setChartData(configs(chart.labels, chartDatasets));
-  }, [chart]);
+    setChartData(configs(chart.labels, chartDatasets))
+  }, [chart])
 
   return (
     <Card>
       <MDBox p={2} lineHeight={1}>
-        <MDTypography variant="button" textTransform="capitalize" fontWeight="medium" color="text">
+        <MDTypography
+          variant="button"
+          textTransform="capitalize"
+          fontWeight="medium"
+          color="text"
+        >
           {title}
         </MDTypography>
         <MDTypography variant="h5" fontWeight="bold" color="dark">
           {count}&nbsp;
-          <MDTypography variant="button" fontWeight="bold" color={percentage.color}>
+          <MDTypography
+            variant="button"
+            fontWeight="bold"
+            color={percentage.color}
+          >
             {percentage.label}
           </MDTypography>
         </MDTypography>
       </MDBox>
       {useMemo(
         () => (
-          <MDBox ref={chartRef} sx={{ height: "5.375rem" }}>
+          <MDBox ref={chartRef} sx={{ height: '5.375rem' }}>
             <Line data={data} options={options} />
           </MDBox>
         ),
         [chartData]
       )}
     </Card>
-  );
+  )
 }
 
 // Typechecking props for the Chart
@@ -91,10 +100,18 @@ Chart.propTypes = {
   title: PropTypes.string.isRequired,
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   percentage: PropTypes.shape({
-    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+    color: PropTypes.oneOf([
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'dark',
+    ]),
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   }).isRequired,
   chart: PropTypes.objectOf(PropTypes.array).isRequired,
-};
+}
 
-export default Chart;
+export default Chart

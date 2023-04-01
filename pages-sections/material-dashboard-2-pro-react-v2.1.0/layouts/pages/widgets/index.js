@@ -13,47 +13,47 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useMemo, useState } from "react";
+import { useMemo, useState } from 'react'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
+import Grid from '@mui/material/Grid'
+import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
-import ProgressLineChart from "examples/Charts/LineCharts/ProgressLineChart";
-import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
-import MasterCard from "examples/Cards/MasterCard";
-import MiniInfoCard from "examples/Cards/InfoCards/MiniInfoCard";
-import ControllerCard from "examples/Cards/ControllerCard";
-import Calendar from "examples/Calendar";
-import CategoriesList from "examples/Lists/CategoriesList";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
+import MiniStatisticsCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/StatisticsCards/MiniStatisticsCard'
+import ProgressLineChart from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Charts/LineCharts/ProgressLineChart'
+import DefaultInfoCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/InfoCards/DefaultInfoCard'
+import MasterCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/MasterCard'
+import MiniInfoCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/InfoCards/MiniInfoCard'
+import ControllerCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/ControllerCard'
+import Calendar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Calendar'
+import CategoriesList from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Lists/CategoriesList'
 
 // Widgets page components
-import Steps from "layouts/pages/widgets/components/Steps";
-import FullBody from "layouts/pages/widgets/components/FullBody";
-import MediaPlayer from "layouts/pages/widgets/components/MediaPlayer";
-import OrdersOverview from "layouts/pages/widgets/components/OrdersOverview";
-import UpcomingEvents from "layouts/pages/widgets/components/UpcomingEvents";
-import Chart from "layouts/pages/widgets/components/Chart";
+import Steps from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/components/Steps'
+import FullBody from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/components/FullBody'
+import MediaPlayer from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/components/MediaPlayer'
+import OrdersOverview from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/components/OrdersOverview'
+import UpcomingEvents from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/components/UpcomingEvents'
+import Chart from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/components/Chart'
 
 // Data
-import progressLineChartData from "layouts/pages/widgets/data/progressLineChartData";
-import calendarEventsData from "layouts/pages/widgets/data/calendarEventsData";
-import categoriesListData from "layouts/pages/widgets/data/categoriesListData";
-import caloriesChartData from "layouts/pages/widgets/data/caloriesChartData";
+import progressLineChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/data/progressLineChartData'
+import calendarEventsData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/data/calendarEventsData'
+import categoriesListData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/data/categoriesListData'
+import caloriesChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/widgets/data/caloriesChartData'
 
 function Widgets() {
-  const [lights, setLights] = useState(false);
+  const [lights, setLights] = useState(false)
 
-  const handleSetLights = () => setLights(!lights);
+  const handleSetLights = () => setLights(!lights)
 
   return (
     <DashboardLayout>
@@ -81,16 +81,16 @@ function Widgets() {
             <Grid item xs={12} md={6} lg={3}>
               <MDBox mb={3}>
                 <MiniStatisticsCard
-                  title={{ text: "battery health" }}
+                  title={{ text: 'battery health' }}
                   count="99 %"
-                  icon={{ color: "info", component: "battery_charging_full" }}
+                  icon={{ color: 'info', component: 'battery_charging_full' }}
                   direction="left"
                 />
               </MDBox>
               <MiniStatisticsCard
-                title={{ text: "music volume" }}
+                title={{ text: 'music volume' }}
                 count="15/100"
-                icon={{ color: "info", component: "volume_down" }}
+                icon={{ color: 'info', component: 'volume_down' }}
                 direction="left"
               />
             </Grid>
@@ -100,7 +100,7 @@ function Widgets() {
               sm={3}
               lg={5}
               display="flex"
-              flexDirection={{ xs: "column", sm: "row" }}
+              flexDirection={{ xs: 'column', sm: 'row' }}
             >
               <MDBox width="100%" mr={{ xs: 0, sm: 3 }} mb={{ xs: 3, sm: 0 }}>
                 <DefaultInfoCard
@@ -120,7 +120,11 @@ function Widgets() {
               </MDBox>
             </Grid>
             <Grid item xs={12} lg={4}>
-              <MasterCard number={4562112245947852} holder="jack peterson" expires="11/22" />
+              <MasterCard
+                number={4562112245947852}
+                holder="jack peterson"
+                expires="11/22"
+              />
             </Grid>
           </Grid>
         </MDBox>
@@ -133,7 +137,10 @@ function Widgets() {
               <ControllerCard
                 state={lights}
                 icon={
-                  <Icon className={lights ? "text-white" : "text-dark"} fontSize="large">
+                  <Icon
+                    className={lights ? 'text-white' : 'text-dark'}
+                    fontSize="large"
+                  >
                     lightbulb
                   </Icon>
                 }
@@ -145,7 +152,7 @@ function Widgets() {
               <Chart
                 title="calories"
                 count={97}
-                percentage={{ color: "success", label: "+5%" }}
+                percentage={{ color: 'success', label: '+5%' }}
                 chart={caloriesChartData}
               />
             </Grid>
@@ -155,7 +162,11 @@ function Widgets() {
                 title={
                   <>
                     754&nbsp;
-                    <MDTypography variant="button" color="secondary" fontWeight="medium">
+                    <MDTypography
+                      variant="button"
+                      color="secondary"
+                      fontWeight="medium"
+                    >
                       m
                     </MDTypography>
                   </>
@@ -173,7 +184,7 @@ function Widgets() {
             {useMemo(
               () => (
                 <Calendar
-                  header={{ title: "calendar", date: "Monday, 2021" }}
+                  header={{ title: 'calendar', date: 'Monday, 2021' }}
                   headerToolbar={false}
                   initialView="dayGridMonth"
                   initialDate="2021-08-10"
@@ -187,7 +198,10 @@ function Widgets() {
           </Grid>
           <Grid item xs={12} lg={3}>
             <MDBox mb={3}>
-              <CategoriesList title="categories" categories={categoriesListData} />
+              <CategoriesList
+                title="categories"
+                categories={categoriesListData}
+              />
             </MDBox>
             <MediaPlayer />
           </Grid>
@@ -198,7 +212,7 @@ function Widgets() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default Widgets;
+export default Widgets

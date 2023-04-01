@@ -14,11 +14,11 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 function TableCell({ width, align, padding, noBorder, children }) {
   return (
@@ -39,16 +39,16 @@ function TableCell({ width, align, padding, noBorder, children }) {
         {children}
       </MDTypography>
     </MDBox>
-  );
+  )
 }
 
 // Setting default values for the props of TableCell
 TableCell.defaultProps = {
-  width: "auto",
-  align: "left",
+  width: 'auto',
+  align: 'left',
   padding: [],
   noBorder: false,
-};
+}
 
 // Typechecking props for TableCell
 TableCell.propTypes = {
@@ -57,6 +57,6 @@ TableCell.propTypes = {
   align: PropTypes.string,
   padding: PropTypes.arrayOf(PropTypes.number),
   noBorder: PropTypes.bool,
-};
+}
 
-export default TableCell;
+export default TableCell

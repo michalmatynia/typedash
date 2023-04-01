@@ -14,37 +14,44 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import PageLayout from "examples/LayoutContainers/PageLayout";
+import DefaultNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DefaultNavbar'
+import PageLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/PageLayout'
 
 // Material Dashboard 2 PRO React page layout routes
-import pageRoutes from "page.routes";
+import pageRoutes from 'data/material-dashboard-2-pro-react-v2.1.0/rootsystem/page.routes'
 
 // Material Dashboard 2 PRO React context
-import { useMaterialUIController } from "context";
+import { useMaterialUIController } from 'contexts/material-dashboard-2-pro-react-v2.1.0/context'
 
-function IllustrationLayout({ header, title, description, illustration, children }) {
-  const [controller] = useMaterialUIController();
-  const { darkMode } = controller;
+function IllustrationLayout({
+  header,
+  title,
+  description,
+  illustration,
+  children,
+}) {
+  const [controller] = useMaterialUIController()
+  const { darkMode } = controller
 
   return (
     <PageLayout background="white">
       <DefaultNavbar
         routes={pageRoutes}
         action={{
-          type: "external",
-          route: "https://creative-tim.com/product/material-dashboard-pro-react",
-          label: "buy now",
+          type: 'external',
+          route:
+            'https://creative-tim.com/product/material-dashboard-pro-react',
+          label: 'buy now',
         }}
       />
       <Grid
@@ -56,7 +63,7 @@ function IllustrationLayout({ header, title, description, illustration, children
       >
         <Grid item xs={12} lg={6}>
           <MDBox
-            display={{ xs: "none", lg: "flex" }}
+            display={{ xs: 'none', lg: 'flex' }}
             width="calc(100% - 2rem)"
             height="calc(100vh - 2rem)"
             borderRadius="lg"
@@ -65,8 +72,13 @@ function IllustrationLayout({ header, title, description, illustration, children
             sx={{ backgroundImage: `url(${illustration})` }}
           />
         </Grid>
-        <Grid item xs={11} sm={8} md={6} lg={4} xl={3} sx={{ mx: "auto" }}>
-          <MDBox display="flex" flexDirection="column" justifyContent="center" height="100vh">
+        <Grid item xs={11} sm={8} md={6} lg={4} xl={3} sx={{ mx: 'auto' }}>
+          <MDBox
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            height="100vh"
+          >
             <MDBox py={3} px={3} textAlign="center">
               {!header ? (
                 <>
@@ -88,16 +100,16 @@ function IllustrationLayout({ header, title, description, illustration, children
         </Grid>
       </Grid>
     </PageLayout>
-  );
+  )
 }
 
 // Setting default values for the props of IllustrationLayout
 IllustrationLayout.defaultProps = {
-  header: "",
-  title: "",
-  description: "",
-  illustration: "",
-};
+  header: '',
+  title: '',
+  description: '',
+  illustration: '',
+}
 
 // Typechecking props for the IllustrationLayout
 IllustrationLayout.propTypes = {
@@ -106,6 +118,6 @@ IllustrationLayout.propTypes = {
   description: PropTypes.string,
   children: PropTypes.node.isRequired,
   illustration: PropTypes.string,
-};
+}
 
-export default IllustrationLayout;
+export default IllustrationLayout

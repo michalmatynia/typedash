@@ -14,22 +14,26 @@ Coded by www.creative-tim.com
 */
 
 // prop-type is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // NewUser page components
-import FormField from "layouts/pages/users/new-user/components/FormField";
+import FormField from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/users/new-user/components/FormField'
 
 function Socials({ formData }) {
-  const { formField, values, errors, touched } = formData;
-  const { twitter, facebook, instagram } = formField;
-  const { twitter: twitterV, facebook: facebookV, instagram: instagramV } = values;
+  const { formField, values, errors, touched } = formData
+  const { twitter, facebook, instagram } = formField
+  const {
+    twitter: twitterV,
+    facebook: facebookV,
+    instagram: instagramV,
+  } = values
 
   return (
     <MDBox>
@@ -70,12 +74,12 @@ function Socials({ formData }) {
         </Grid>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
 // typechecking props for Socials
 Socials.propTypes = {
   formData: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
-};
+}
 
-export default Socials;
+export default Socials

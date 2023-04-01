@@ -14,22 +14,22 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
 
 // Settings page components
-import BaseLayout from "layouts/pages/account/components/BaseLayout";
-import Sidenav from "layouts/pages/account/settings/components/Sidenav";
-import Header from "layouts/pages/account/settings/components/Header";
-import BasicInfo from "layouts/pages/account/settings/components/BasicInfo";
-import ChangePassword from "layouts/pages/account/settings/components/ChangePassword";
-import Authentication from "layouts/pages/account/settings/components/Authentication";
-import Accounts from "layouts/pages/account/settings/components/Accounts";
-import Notifications from "layouts/pages/account/settings/components/Notifications";
-import Sessions from "layouts/pages/account/settings/components/Sessions";
-import DeleteAccount from "layouts/pages/account/settings/components/DeleteAccount";
+import BaseLayout from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/components/BaseLayout'
+import Sidenav from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/Sidenav'
+import Header from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/Header'
+import BasicInfo from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/BasicInfo'
+import ChangePassword from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/ChangePassword'
+import Authentication from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/Authentication'
+import Accounts from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/Accounts'
+import Notifications from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/Notifications'
+import Sessions from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/Sessions'
+import DeleteAccount from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/settings/components/DeleteAccount'
 
 function Settings() {
   return (
@@ -72,7 +72,7 @@ function Settings() {
         </Grid>
       </MDBox>
     </BaseLayout>
-  );
+  )
 }
 
-export default Settings;
+export default Settings

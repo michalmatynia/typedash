@@ -14,37 +14,37 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Tooltip from "@mui/material/Tooltip";
-import Icon from "@mui/material/Icon";
+import Grid from '@mui/material/Grid'
+import Tooltip from '@mui/material/Tooltip'
+import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
-import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
-import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
-import BookingCard from "examples/Cards/BookingCard";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
+import ReportsBarChart from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Charts/BarCharts/ReportsBarChart'
+import ReportsLineChart from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Charts/LineCharts/ReportsLineChart'
+import ComplexStatisticsCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/StatisticsCards/ComplexStatisticsCard'
+import BookingCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/BookingCard'
 
 // Anaytics dashboard components
-import SalesByCountry from "layouts/dashboards/analytics/components/SalesByCountry";
+import SalesByCountry from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/analytics/components/SalesByCountry'
 
 // Data
-import reportsBarChartData from "layouts/dashboards/analytics/data/reportsBarChartData";
-import reportsLineChartData from "layouts/dashboards/analytics/data/reportsLineChartData";
+import reportsBarChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/analytics/data/reportsBarChartData'
+import reportsLineChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/analytics/data/reportsLineChartData'
 
 // Images
-import booking1 from "assets/images/products/product-1-min.jpg";
-import booking2 from "assets/images/products/product-2-min.jpg";
-import booking3 from "assets/images/products/product-3-min.jpg";
+import booking1 from 'public/img/material-dashboard-2-pro-react-v2.1.0/products/product-1-min.jpg'
+import booking2 from 'public/img/material-dashboard-2-pro-react-v2.1.0/products/product-2-min.jpg'
+import booking3 from 'public/img/material-dashboard-2-pro-react-v2.1.0/products/product-3-min.jpg'
 
 function Analytics() {
-  const { sales, tasks } = reportsLineChartData;
+  const { sales, tasks } = reportsLineChartData
 
   // Action buttons for the BookingCard
   const actionButtons = (
@@ -54,18 +54,23 @@ function Analytics() {
           variant="body1"
           color="primary"
           lineHeight={1}
-          sx={{ cursor: "pointer", mx: 3 }}
+          sx={{ cursor: 'pointer', mx: 3 }}
         >
           <Icon color="inherit">refresh</Icon>
         </MDTypography>
       </Tooltip>
       <Tooltip title="Edit" placement="bottom">
-        <MDTypography variant="body1" color="info" lineHeight={1} sx={{ cursor: "pointer", mx: 3 }}>
+        <MDTypography
+          variant="body1"
+          color="info"
+          lineHeight={1}
+          sx={{ cursor: 'pointer', mx: 3 }}
+        >
           <Icon color="inherit">edit</Icon>
         </MDTypography>
       </Tooltip>
     </>
-  );
+  )
 
   return (
     <DashboardLayout>
@@ -125,9 +130,9 @@ function Analytics() {
                   title="Bookings"
                   count={281}
                   percentage={{
-                    color: "success",
-                    amount: "+55%",
-                    label: "than lask week",
+                    color: 'success',
+                    amount: '+55%',
+                    label: 'than lask week',
                   }}
                 />
               </MDBox>
@@ -139,9 +144,9 @@ function Analytics() {
                   title="Today's Users"
                   count="2,300"
                   percentage={{
-                    color: "success",
-                    amount: "+3%",
-                    label: "than last month",
+                    color: 'success',
+                    amount: '+3%',
+                    label: 'than last month',
                   }}
                 />
               </MDBox>
@@ -154,9 +159,9 @@ function Analytics() {
                   title="Revenue"
                   count="34k"
                   percentage={{
-                    color: "success",
-                    amount: "+1%",
-                    label: "than yesterday",
+                    color: 'success',
+                    amount: '+1%',
+                    label: 'than yesterday',
                   }}
                 />
               </MDBox>
@@ -169,9 +174,9 @@ function Analytics() {
                   title="Followers"
                   count="+91"
                   percentage={{
-                    color: "success",
-                    amount: "",
-                    label: "Just updated",
+                    color: 'success',
+                    amount: '',
+                    label: 'Just updated',
                   }}
                 />
               </MDBox>
@@ -183,7 +188,7 @@ function Analytics() {
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mt={3}>
                 <BookingCard
-                  image={booking1}
+                  image={booking1.src}
                   title="Cozy 5 Stars Apartment"
                   description='The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.'
                   price="$899/night"
@@ -195,7 +200,7 @@ function Analytics() {
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mt={3}>
                 <BookingCard
-                  image={booking2}
+                  image={booking2.src}
                   title="Office Studio"
                   description='The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the night life in London, UK.'
                   price="$1.119/night"
@@ -207,7 +212,7 @@ function Analytics() {
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mt={3}>
                 <BookingCard
-                  image={booking3}
+                  image={booking3.src}
                   title="Beautiful Castle"
                   description='The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Milan.'
                   price="$459/night"
@@ -221,7 +226,7 @@ function Analytics() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default Analytics;
+export default Analytics

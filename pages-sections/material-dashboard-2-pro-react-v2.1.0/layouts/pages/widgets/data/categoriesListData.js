@@ -14,62 +14,62 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 PRO React components
-import MDTypography from "components/MDTypography";
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 const categoriesListData = [
   {
-    color: "dark",
-    icon: "launch",
-    name: "Devices",
+    color: 'dark',
+    icon: 'launch',
+    name: 'Devices',
     description: (
       <>
-        250 in stock,{" "}
+        250 in stock,{' '}
         <MDTypography variant="caption" color="text" fontWeight="medium">
           346+ sold
         </MDTypography>
       </>
     ),
-    route: "/",
+    route: '/',
   },
   {
-    color: "dark",
-    icon: "book_online",
-    name: "Tickets",
+    color: 'dark',
+    icon: 'book_online',
+    name: 'Tickets',
     description: (
       <>
-        123 closed,{" "}
+        123 closed,{' '}
         <MDTypography variant="caption" color="text" fontWeight="medium">
           15 open
         </MDTypography>
       </>
     ),
-    route: "/",
+    route: '/',
   },
   {
-    color: "dark",
-    icon: "priority_high",
-    name: "Error logs",
+    color: 'dark',
+    icon: 'priority_high',
+    name: 'Error logs',
     description: (
       <>
-        1 is active,{" "}
+        1 is active,{' '}
         <MDTypography variant="caption" color="text" fontWeight="medium">
           40 closed
         </MDTypography>
       </>
     ),
-    route: "/",
+    route: '/',
   },
   {
-    color: "dark",
-    icon: "insert_emoticon",
-    name: "Happy users",
+    color: 'dark',
+    icon: 'insert_emoticon',
+    name: 'Happy users',
     description: (
       <MDTypography variant="caption" color="text" fontWeight="medium">
         + 430
       </MDTypography>
     ),
-    route: "/",
+    route: '/',
   },
-];
+]
 
-export default categoriesListData;
+export default categoriesListData

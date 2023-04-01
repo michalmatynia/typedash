@@ -14,14 +14,14 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Checkbox from "@mui/material/Checkbox";
+import Checkbox from '@mui/material/Checkbox'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 function IdCell({ id, checked }) {
   return (
@@ -33,18 +33,18 @@ function IdCell({ id, checked }) {
         </MDTypography>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
 // Setting default value for the props of IdCell
 IdCell.defaultProps = {
   checked: false,
-};
+}
 
 // Typechecking props for the IdCell
 IdCell.propTypes = {
   id: PropTypes.string.isRequired,
   checked: PropTypes.bool,
-};
+}
 
-export default IdCell;
+export default IdCell

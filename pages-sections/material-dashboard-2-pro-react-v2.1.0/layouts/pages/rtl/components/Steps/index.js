@@ -14,12 +14,12 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDBadge from "components/MDBadge";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDBadge from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBadge'
 
 function Steps() {
   return (
@@ -33,10 +33,15 @@ function Steps() {
             11.4ك
           </MDTypography>
         </MDBox>
-        <MDBadge variant="contained" color="success" badgeContent="+4.3%" container />
+        <MDBadge
+          variant="contained"
+          color="success"
+          badgeContent="+4.3%"
+          container
+        />
       </MDBox>
     </Card>
-  );
+  )
 }
 
-export default Steps;
+export default Steps

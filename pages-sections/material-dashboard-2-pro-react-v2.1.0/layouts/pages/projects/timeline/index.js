@@ -14,20 +14,20 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import TimelineList from "examples/Timeline/TimelineList";
-import TimelineItem from "examples/Timeline/TimelineItem";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
+import TimelineList from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Timeline/TimelineList'
+import TimelineItem from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Timeline/TimelineItem'
 
 // Data
-import timelineData from "layouts/pages/projects/timeline/data/timelineData";
+import timelineData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/projects/timeline/data/timelineData'
 
 function Timeline() {
   const renderTimelineItems = timelineData.map(
@@ -43,7 +43,7 @@ function Timeline() {
         lastItem={lastItem}
       />
     )
-  );
+  )
 
   return (
     <DashboardLayout>
@@ -51,7 +51,9 @@ function Timeline() {
       <MDBox my={3}>
         <Grid container spacing={3}>
           <Grid item xs={12} lg={6}>
-            <TimelineList title="Timeline with dotted line">{renderTimelineItems}</TimelineList>
+            <TimelineList title="Timeline with dotted line">
+              {renderTimelineItems}
+            </TimelineList>
           </Grid>
           <Grid item xs={12} lg={6}>
             <TimelineList title="Timeline with dotted line" dark>
@@ -62,7 +64,7 @@ function Timeline() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default Timeline;
+export default Timeline

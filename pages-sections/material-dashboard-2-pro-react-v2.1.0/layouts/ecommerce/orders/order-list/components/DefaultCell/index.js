@@ -14,10 +14,10 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Material Dashboard 2 PRO React components
-import MDTypography from "components/MDTypography";
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 function DefaultCell({ value, suffix }) {
   return (
@@ -29,18 +29,18 @@ function DefaultCell({ value, suffix }) {
         </MDTypography>
       )}
     </MDTypography>
-  );
+  )
 }
 
 // Setting default values for the props of DefaultCell
 DefaultCell.defaultProps = {
-  suffix: "",
-};
+  suffix: '',
+}
 
 // Typechecking props for the DefaultCell
 DefaultCell.propTypes = {
   value: PropTypes.string.isRequired,
   suffix: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-};
+}
 
-export default DefaultCell;
+export default DefaultCell

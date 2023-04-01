@@ -14,21 +14,21 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Icon from "@mui/material/Icon";
-import Collapse from "@mui/material/Collapse";
+import Icon from '@mui/material/Icon'
+import Collapse from '@mui/material/Collapse'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React components
-import borders from "assets/theme/base/borders";
+import borders from 'themes/material-dashboard-2-pro-react-v2.1.0/theme/base/borders'
 
 function FaqCollapse({ title, open, children, ...rest }) {
-  const { borderWidth, borderColor } = borders;
+  const { borderWidth, borderColor } = borders
 
   return (
     <MDBox mb={2}>
@@ -39,26 +39,35 @@ function FaqCollapse({ title, open, children, ...rest }) {
         alignItems="center"
         p={2}
         borderBottom={`${borderWidth[1]} solid ${borderColor}`}
-        sx={{ cursor: "pointer" }}
+        sx={{ cursor: 'pointer' }}
       >
-        <MDTypography variant="h5" color={open ? "dark" : "text"} sx={{ userSelect: "none" }}>
+        <MDTypography
+          variant="h5"
+          color={open ? 'dark' : 'text'}
+          sx={{ userSelect: 'none' }}
+        >
           {title}
         </MDTypography>
-        <MDBox color={open ? "dark" : "text"}>
-          <Icon sx={{ fontWeight: "bold" }} fontSize="small">
-            {open ? "remove" : "add"}
+        <MDBox color={open ? 'dark' : 'text'}>
+          <Icon sx={{ fontWeight: 'bold' }} fontSize="small">
+            {open ? 'remove' : 'add'}
           </Icon>
         </MDBox>
       </MDBox>
       <Collapse timeout={400} in={open}>
         <MDBox p={2} lineHeight={1}>
-          <MDTypography variant="button" color="text" opacity={0.8} fontWeight="regular">
+          <MDTypography
+            variant="button"
+            color="text"
+            opacity={0.8}
+            fontWeight="regular"
+          >
             {children}
           </MDTypography>
         </MDBox>
       </Collapse>
     </MDBox>
-  );
+  )
 }
 
 // Typechecking props for the FaqCollapse
@@ -66,6 +75,6 @@ FaqCollapse.propTypes = {
   title: PropTypes.string.isRequired,
   open: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-};
+}
 
-export default FaqCollapse;
+export default FaqCollapse

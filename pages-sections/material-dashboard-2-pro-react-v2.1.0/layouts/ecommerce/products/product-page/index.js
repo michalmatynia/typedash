@@ -14,32 +14,32 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Card from '@mui/material/Card'
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import DataTable from "examples/Tables/DataTable";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
+import DataTable from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Tables/DataTable'
 
 // ProductPage page components
-import ProductImages from "layouts/ecommerce/products/product-page/components/ProductImages";
-import ProductInfo from "layouts/ecommerce/products/product-page/components/ProductInfo";
+import ProductImages from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/product-page/components/ProductImages'
+import ProductInfo from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/product-page/components/ProductInfo'
 
 // Data
-import dataTableData from "layouts/ecommerce/products/product-page/data/dataTableData";
+import dataTableData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/product-page/data/dataTableData'
 
 function ProductPage() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox py={3}>
-        <Card sx={{ overflow: "visible" }}>
+        <Card sx={{ overflow: 'visible' }}>
           <MDBox p={3}>
             <MDBox mb={3}>
               <MDTypography variant="h5" fontWeight="medium">
@@ -51,7 +51,7 @@ function ProductPage() {
               <Grid item xs={12} lg={6} xl={5}>
                 <ProductImages />
               </Grid>
-              <Grid item xs={12} lg={5} sx={{ mx: "auto" }}>
+              <Grid item xs={12} lg={5} sx={{ mx: 'auto' }}>
                 <ProductInfo />
               </Grid>
             </Grid>
@@ -74,7 +74,7 @@ function ProductPage() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default ProductPage;
+export default ProductPage

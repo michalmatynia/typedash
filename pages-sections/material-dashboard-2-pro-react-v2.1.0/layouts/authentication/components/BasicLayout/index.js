@@ -14,23 +14,23 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
 
 // Material Dashboard 2 PRO React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import PageLayout from "examples/LayoutContainers/PageLayout";
+import DefaultNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DefaultNavbar'
+import PageLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/PageLayout'
 
 // Material Dashboard 2 PRO React page layout routes
-import pageRoutes from "page.routes";
+import pageRoutes from 'data/material-dashboard-2-pro-react-v2.1.0/rootsystem/page.routes'
 
 // Authentication pages components
-import Footer from "layouts/authentication/components/Footer";
+import Footer from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/authentication/components/Footer'
 
 function BasicLayout({ image, children }) {
   return (
@@ -38,9 +38,10 @@ function BasicLayout({ image, children }) {
       <DefaultNavbar
         routes={pageRoutes}
         action={{
-          type: "external",
-          route: "https://creative-tim.com/product/material-dashboard-pro-react",
-          label: "buy now",
+          type: 'external',
+          route:
+            'https://creative-tim.com/product/material-dashboard-pro-react',
+          label: 'buy now',
         }}
         transparent
         light
@@ -50,19 +51,28 @@ function BasicLayout({ image, children }) {
         width="100%"
         minHeight="100vh"
         sx={{
-          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+          backgroundImage: ({
+            functions: { linearGradient, rgba },
+            palette: { gradients },
+          }) =>
             image &&
             `${linearGradient(
               rgba(gradients.dark.main, 0.6),
               rgba(gradients.dark.state, 0.6)
             )}, url(${image})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       />
       <MDBox px={1} width="100%" height="100vh" mx="auto">
-        <Grid container spacing={1} justifyContent="center" alignItems="center" height="100%">
+        <Grid
+          container
+          spacing={1}
+          justifyContent="center"
+          alignItems="center"
+          height="100%"
+        >
           <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
             {children}
           </Grid>
@@ -70,13 +80,13 @@ function BasicLayout({ image, children }) {
       </MDBox>
       <Footer light />
     </PageLayout>
-  );
+  )
 }
 
 // Typechecking props for the BasicLayout
 BasicLayout.propTypes = {
   image: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-};
+}
 
-export default BasicLayout;
+export default BasicLayout

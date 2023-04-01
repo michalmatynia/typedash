@@ -14,11 +14,11 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // Material Dashboard 2 PRO React examples
-import TimelineItem from "examples/Timeline/TimelineItem";
+import TimelineItem from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Timeline/TimelineItem'
 
 function OrdersOverview() {
   return (
@@ -54,7 +54,7 @@ function OrdersOverview() {
         />
       </MDBox>
     </>
-  );
+  )
 }
 
-export default OrdersOverview;
+export default OrdersOverview

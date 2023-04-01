@@ -14,7 +14,7 @@ export default function Home(): InferGetStaticPropsType<typeof getStaticProps> {
 
   useEffect(() => {
     async function reRoute() {
-      await router.push('/material-dashboard-2-pro-react-v2.1.0/landingpage')
+      await router.push('/material-dashboard-2-pro-react-v2.1.0')
     }
     reRoute().catch((err) => console.error(err))
   }, [router])

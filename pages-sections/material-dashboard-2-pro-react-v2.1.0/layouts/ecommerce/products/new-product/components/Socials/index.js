@@ -14,14 +14,14 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
 
 // NewProduct page components
-import FormField from "layouts/ecommerce/products/new-product/components/FormField";
+import FormField from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/new-product/components/FormField'
 
 function Socials() {
   return (
@@ -43,7 +43,7 @@ function Socials() {
         </Grid>
       </MDBox>
     </MDBox>
-  );
+  )
 }
 
-export default Socials;
+export default Socials

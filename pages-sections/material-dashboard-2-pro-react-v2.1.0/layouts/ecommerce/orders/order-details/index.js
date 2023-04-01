@@ -14,25 +14,25 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
-import Divider from "@mui/material/Divider";
+import Grid from '@mui/material/Grid'
+import Card from '@mui/material/Card'
+import Divider from '@mui/material/Divider'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
 
 // OrderDetails page components
-import Header from "layouts/ecommerce/orders/order-details/components/Header";
-import OrderInfo from "layouts/ecommerce/orders/order-details/components/OrderInfo";
-import TrackOrder from "layouts/ecommerce/orders/order-details/components/TrackOrder";
-import PaymentDetails from "layouts/ecommerce/orders/order-details/components/PaymentDetails";
-import BillingInformation from "layouts/ecommerce/orders/order-details/components/BillingInformation";
-import OrderSummary from "layouts/ecommerce/orders/order-details/components/OrderSummary";
+import Header from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/orders/order-details/components/Header'
+import OrderInfo from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/orders/order-details/components/OrderInfo'
+import TrackOrder from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/orders/order-details/components/TrackOrder'
+import PaymentDetails from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/orders/order-details/components/PaymentDetails'
+import BillingInformation from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/orders/order-details/components/BillingInformation'
+import OrderSummary from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/orders/order-details/components/OrderSummary'
 
 function OrderDetails() {
   return (
@@ -62,7 +62,7 @@ function OrderDetails() {
                         <BillingInformation />
                       </MDBox>
                     </Grid>
-                    <Grid item xs={12} lg={3} sx={{ ml: "auto" }}>
+                    <Grid item xs={12} lg={3} sx={{ ml: 'auto' }}>
                       <OrderSummary />
                     </Grid>
                   </Grid>
@@ -74,7 +74,7 @@ function OrderDetails() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default OrderDetails;
+export default OrderDetails

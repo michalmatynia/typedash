@@ -14,16 +14,16 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Images
-import bgImage from "assets/images/bg-player.jpeg";
+import bgImage from 'public/img/material-dashboard-2-pro-react-v2.1.0//bg-player.jpeg'
 
 function MediaPlayer() {
   const mediaPlayerButtonStyles = ({ functions: { pxToRem } }) => ({
@@ -32,17 +32,20 @@ function MediaPlayer() {
     minWidth: pxToRem(46),
     minHeight: pxToRem(46),
     mr: 1,
-  });
+  })
 
   return (
     <Card
-      sx={({ functions: { linearGradient, rgba }, palette: { gradients } }) => ({
+      sx={({
+        functions: { linearGradient, rgba },
+        palette: { gradients },
+      }) => ({
         backgroundImage: `${linearGradient(
           rgba(gradients.dark.main, 0.85),
           rgba(gradients.dark.state, 0.85)
         )}, url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       })}
     >
       <MDBox p={3} position="relative" lineHeight={0}>
@@ -85,7 +88,7 @@ function MediaPlayer() {
         </MDBox>
       </MDBox>
     </Card>
-  );
+  )
 }
 
-export default MediaPlayer;
+export default MediaPlayer

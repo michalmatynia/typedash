@@ -14,23 +14,23 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDInput from "components/MDInput";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDInput from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDInput'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Authentication layout components
-import CoverLayout from "layouts/authentication/components/CoverLayout";
+import CoverLayout from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/authentication/components/CoverLayout'
 
 // Images
-import bgImage from "assets/images/bg-reset-cover.jpeg";
+import bgImage from 'public/img/material-dashboard-2-pro-react-v2.1.0/bg-reset-cover.jpeg'
 
 function Cover() {
   return (
-    <CoverLayout coverHeight="50vh" image={bgImage}>
+    <CoverLayout coverHeight="50vh" image={bgImage.src}>
       <Card>
         <MDBox
           variant="gradient"
@@ -53,7 +53,12 @@ function Cover() {
         <MDBox pt={4} pb={3} px={3}>
           <MDBox component="form" role="form">
             <MDBox mb={4}>
-              <MDInput type="email" label="Email" variant="standard" fullWidth />
+              <MDInput
+                type="email"
+                label="Email"
+                variant="standard"
+                fullWidth
+              />
             </MDBox>
             <MDBox mt={6} mb={1}>
               <MDButton variant="gradient" color="info" fullWidth>
@@ -64,7 +69,7 @@ function Cover() {
         </MDBox>
       </Card>
     </CoverLayout>
-  );
+  )
 }
 
-export default Cover;
+export default Cover

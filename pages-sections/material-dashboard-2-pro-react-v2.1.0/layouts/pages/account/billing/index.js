@@ -14,21 +14,21 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
 
 // Material Dashboard 2 PRO React components
-import MasterCard from "examples/Cards/MasterCard";
-import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
+import MasterCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/MasterCard'
+import DefaultInfoCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/InfoCards/DefaultInfoCard'
 
 // Billing page components
-import BaseLayout from "layouts/pages/account/components/BaseLayout";
-import PaymentMethod from "layouts/pages/account/billing/components/PaymentMethod";
-import Invoices from "layouts/pages/account/billing/components/Invoices";
-import BillingInformation from "layouts/pages/account/billing/components/BillingInformation";
-import Transactions from "layouts/pages/account/billing/components/Transactions";
+import BaseLayout from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/components/BaseLayout'
+import PaymentMethod from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/billing/components/PaymentMethod'
+import Invoices from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/billing/components/Invoices'
+import BillingInformation from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/billing/components/BillingInformation'
+import Transactions from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/pages/account/billing/components/Transactions'
 
 function Billing() {
   return (
@@ -39,7 +39,11 @@ function Billing() {
             <Grid item xs={12} lg={8}>
               <Grid container spacing={3}>
                 <Grid item xs={12} xl={6}>
-                  <MasterCard number={4562112245947852} holder="jack peterson" expires="11/22" />
+                  <MasterCard
+                    number={4562112245947852}
+                    holder="jack peterson"
+                    expires="11/22"
+                  />
                 </Grid>
                 <Grid item xs={12} md={6} xl={3}>
                   <DefaultInfoCard
@@ -79,7 +83,7 @@ function Billing() {
         </MDBox>
       </MDBox>
     </BaseLayout>
-  );
+  )
 }
 
-export default Billing;
+export default Billing

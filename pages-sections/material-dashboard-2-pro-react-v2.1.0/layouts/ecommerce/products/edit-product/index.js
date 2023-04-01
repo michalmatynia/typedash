@@ -14,23 +14,23 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // Material Dashboard 2 PRO React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+import MDBox from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDBox'
+import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDTypography'
+import MDButton from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MDButton'
 
 // Material Dashboard 2 PRO React examples
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
+import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
 
 // EditProduct page components
-import ProductImage from "layouts/ecommerce/products/edit-product/components/ProductImage";
-import ProductInfo from "layouts/ecommerce/products/edit-product/components/ProductInfo";
-import Socials from "layouts/ecommerce/products/edit-product/components/Socials";
-import Pricing from "layouts/ecommerce/products/edit-product/components/Pricing";
+import ProductImage from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/edit-product/components/ProductImage'
+import ProductInfo from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/edit-product/components/ProductInfo'
+import Socials from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/edit-product/components/Socials'
+import Pricing from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/ecommerce/products/edit-product/components/Pricing'
 
 function EditProduct() {
   return (
@@ -45,8 +45,8 @@ function EditProduct() {
               </MDTypography>
               <MDBox mt={1} mb={2}>
                 <MDTypography variant="body2" color="text">
-                  We’re constantly trying to express ourselves and actualize our dreams. If you have
-                  the opportunity to play.
+                  We’re constantly trying to express ourselves and actualize our
+                  dreams. If you have the opportunity to play.
                 </MDTypography>
               </MDBox>
             </Grid>
@@ -76,7 +76,7 @@ function EditProduct() {
       </MDBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default EditProduct;
+export default EditProduct

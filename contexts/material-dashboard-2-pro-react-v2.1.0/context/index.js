@@ -92,6 +92,7 @@ function MaterialUIControllerProvider({ children }) {
 
 // Material Dashboard 2 PRO React custom hook for using context
 function useMaterialUIController() {
+  console.log(MaterialUI)
   const context = useContext(MaterialUI)
 
   if (!context) {
