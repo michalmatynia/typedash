@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 import { useState, useEffect } from 'react'
 
 // react-router components
-// import { useLocation, Link } from 'react-router-dom'
+// import { useLocation, Link } from 'react-router-dom' d
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
