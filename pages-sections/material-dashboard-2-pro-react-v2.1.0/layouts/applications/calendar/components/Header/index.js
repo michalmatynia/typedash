@@ -46,7 +46,7 @@ function Header() {
 
   return (
     <MDBox display="flex" alignItems="center">
-      {/* <MDBox mt={0.5} pr={1}>
+      <MDBox mt={0.5} pr={1}>
         <MDBox mb={1} ml={-1.25} lineHeight={0}>
           <MDTypography variant="button" color="secondary">
             Team members:
@@ -97,7 +97,7 @@ function Header() {
       </MDBox>
       <MDBox height="75%" alignSelf="flex-end">
         <Divider orientation="vertical" />
-      </MDBox> */}
+      </MDBox>
       <MDBox pl={1}>
         <MDButton variant="outlined" color="dark" iconOnly>
           <Icon sx={{ fontWeight: 'bold' }}>add</Icon>

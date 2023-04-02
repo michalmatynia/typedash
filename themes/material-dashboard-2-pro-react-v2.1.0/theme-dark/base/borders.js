@@ -20,13 +20,13 @@ Coded by www.creative-tim.com
  */
 
 // Material Dashboard 2 PRO React Base Styles
-import colors from "assets/theme-dark/base/colors";
+import colors from 'themes/material-dashboard-2-pro-react-v2.1.0/theme-dark/base/colors'
 
 // Material Dashboard 2 PRO React Helper Functions
-import pxToRem from "assets/theme-dark/functions/pxToRem";
-import rgba from "assets/theme-dark/functions/rgba";
+import pxToRem from 'themes/material-dashboard-2-pro-react-v2.1.0/theme-dark/functions/pxToRem'
+import rgba from 'themes/material-dashboard-2-pro-react-v2.1.0/theme-dark/functions/rgba'
 
-const { white } = colors;
+const { white } = colors
 
 const borders = {
   borderColor: rgba(white.main, 0.4),
@@ -49,6 +49,6 @@ const borders = {
     xxl: pxToRem(16),
     section: pxToRem(160),
   },
-};
+}
 
-export default borders;
+export default borders

@@ -45,7 +45,7 @@ const dataTableData = {
   rows: [
     {
       product: (
-        <ProductCell image={blackChair} name="Christopher Knight Home" />
+        <ProductCell image={blackChair.src} name="Christopher Knight Home" />
       ),
       price: <DefaultCell>$89.53</DefaultCell>,
       review: <ReviewCell rating={4.5} />,
@@ -58,7 +58,7 @@ const dataTableData = {
     },
     {
       product: (
-        <ProductCell image={chairPink} name="Bar Height Swivel Barstool" />
+        <ProductCell image={chairPink.src} name="Bar Height Swivel Barstool" />
       ),
       price: <DefaultCell>$99.99</DefaultCell>,
       review: <ReviewCell rating={5} />,
@@ -71,7 +71,7 @@ const dataTableData = {
     },
     {
       product: (
-        <ProductCell image={chairSteel} name="Signature Design by Ashley" />
+        <ProductCell image={chairSteel.src} name="Signature Design by Ashley" />
       ),
       price: <DefaultCell>$129.00</DefaultCell>,
       review: <ReviewCell rating={4.5} />,
@@ -83,7 +83,7 @@ const dataTableData = {
       id: <DefaultCell>412301</DefaultCell>,
     },
     {
-      product: <ProductCell image={chairWood} name="Modern Square" />,
+      product: <ProductCell image={chairWood.src} name="Modern Square" />,
       price: <DefaultCell>$59.99</DefaultCell>,
       review: <ReviewCell rating={4.5} />,
       availability: (

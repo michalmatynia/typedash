@@ -20,12 +20,12 @@ Coded by www.creative-tim.com
  */
 
 // Material Dashboard 2 PRO React Base Styles
-import colors from "assets/theme-dark/base/colors";
+import colors from 'themes/material-dashboard-2-pro-react-v2.1.0/theme-dark/base/colors'
 
 // Material Dashboard 2 PRO React Helper Functions
-import pxToRem from "assets/theme-dark/functions/pxToRem";
+import pxToRem from 'themes/material-dashboard-2-pro-react-v2.1.0/theme-dark/functions/pxToRem'
 
-const { white } = colors;
+const { white } = colors
 
 const baseProperties = {
   fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
@@ -42,20 +42,20 @@ const baseProperties = {
   fontSizeXL: pxToRem(20),
   fontSize2XL: pxToRem(24),
   fontSize3XL: pxToRem(30),
-};
+}
 
 const baseHeadingProperties = {
   fontFamily: baseProperties.fontFamily,
   color: white.main,
   fontWeight: baseProperties.fontWeightBold,
-};
+}
 
 const baseDisplayProperties = {
   fontFamily: baseProperties.fontFamily,
   color: white.main,
   fontWeight: baseProperties.fontWeightLight,
   lineHeight: 1.2,
-};
+}
 
 const typography = {
   fontFamily: baseProperties.fontFamily,
@@ -134,7 +134,7 @@ const typography = {
     fontSize: baseProperties.fontSizeSM,
     fontWeight: baseProperties.fontWeightLight,
     lineHeight: 1.5,
-    textTransform: "uppercase",
+    textTransform: 'uppercase',
   },
 
   caption: {
@@ -185,8 +185,8 @@ const typography = {
     md: baseProperties.fontSizeMD,
     lg: baseProperties.fontSizeLG,
     xl: baseProperties.fontSizeXL,
-    "2xl": baseProperties.fontSize2XL,
-    "3xl": baseProperties.fontSize3XL,
+    '2xl': baseProperties.fontSize2XL,
+    '3xl': baseProperties.fontSize3XL,
   },
 
   lineHeight: {
@@ -194,6 +194,6 @@ const typography = {
     md: 1.5,
     lg: 2,
   },
-};
+}
 
-export default typography;
+export default typography

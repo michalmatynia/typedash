@@ -28,6 +28,6 @@ const breakpoints = {
     xl: 1200,
     xxl: 1400,
   },
-};
+}
 
-export default breakpoints;
+export default breakpoints

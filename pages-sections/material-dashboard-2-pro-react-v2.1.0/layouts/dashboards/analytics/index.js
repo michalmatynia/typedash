@@ -26,8 +26,8 @@ import MDTypography from 'components/ui/material-dashboard-2-pro-react-v2.1.0/MD
 import DashboardLayout from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/LayoutContainers/DashboardLayout'
 import DashboardNavbar from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Navbars/DashboardNavbar'
 import Footer from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Footer'
-import ReportsBarChart from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Charts/BarCharts/ReportsBarChart'
-import ReportsLineChart from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Charts/LineCharts/ReportsLineChart'
+// import ReportsBarChart from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Charts/BarCharts/ReportsBarChart'
+// import ReportsLineChart from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Charts/LineCharts/ReportsLineChart'
 import ComplexStatisticsCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/StatisticsCards/ComplexStatisticsCard'
 import BookingCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0/Cards/BookingCard'
 
@@ -35,8 +35,8 @@ import BookingCard from 'components/blocks/material-dashboard-2-pro-react-v2.1.0
 import SalesByCountry from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/analytics/components/SalesByCountry'
 
 // Data
-import reportsBarChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/analytics/data/reportsBarChartData'
-import reportsLineChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/analytics/data/reportsLineChartData'
+// import reportsBarChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/analytics/data/reportsBarChartData'
+// import reportsLineChartData from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/analytics/data/reportsLineChartData'
 
 // Images
 import booking1 from 'public/img/material-dashboard-2-pro-react-v2.1.0/products/product-1-min.jpg'
@@ -44,7 +44,7 @@ import booking2 from 'public/img/material-dashboard-2-pro-react-v2.1.0/products/
 import booking3 from 'public/img/material-dashboard-2-pro-react-v2.1.0/products/product-3-min.jpg'
 
 function Analytics() {
-  const { sales, tasks } = reportsLineChartData
+  // const { sales, tasks } = reportsLineChartData
 
   // Action buttons for the BookingCard
   const actionButtons = (
@@ -83,18 +83,18 @@ function Analytics() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
-                <ReportsBarChart
+                {/* <ReportsBarChart
                   color="info"
                   title="website views"
                   description="Last Campaign Performance"
                   date="campaign sent 2 days ago"
                   chart={reportsBarChartData}
-                />
+                /> */}
               </MDBox>
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
-                <ReportsLineChart
+                {/* <ReportsLineChart
                   color="success"
                   title="daily sales"
                   description={
@@ -104,18 +104,18 @@ function Analytics() {
                   }
                   date="updated 4 min ago"
                   chart={sales}
-                />
+                /> */}
               </MDBox>
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
-                <ReportsLineChart
+                {/* <ReportsLineChart
                   color="dark"
                   title="completed tasks"
                   description="Last Campaign Performance"
                   date="just updated"
                   chart={tasks}
-                />
+                /> */}
               </MDBox>
             </Grid>
           </Grid>

@@ -2,15 +2,6 @@
 =========================================================
 * Material Dashboard 2 PRO React - v2.1.0
 =========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
 import { useState, useEffect, useMemo } from 'react'
@@ -18,10 +9,10 @@ import { useState, useEffect, useMemo } from 'react'
 // react-router components
 // import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useRouter } from 'next/router'
-
+import Link from 'next/link'
 // @mui material components
 import { ThemeProvider } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
+// import CssBaseline from '@mui/material/CssBaseline'
 import Icon from '@mui/material/Icon'
 
 // Material Dashboard 2 PRO React components
@@ -46,7 +37,7 @@ import createCache from '@emotion/cache'
 
 // Material Dashboard 2 PRO React routes
 import routes from 'data/material-dashboard-2-pro-react-v2.1.0/rootsystem/routes'
-
+import Analytics from 'pages-sections/material-dashboard-2-pro-react-v2.1.0/layouts/dashboards/analytics'
 // Material Dashboard 2 PRO React contexts
 import {
   useMaterialUIController,
@@ -115,25 +106,18 @@ export default function App() {
     document.scrollingElement.scrollTop = 0
   }, [pathname])
 
-  //   const getRoutes = (allRoutes) =>
-  //     allRoutes.map((route) => {
-  //       //   if (route.collapse) {
-  //       //     return getRoutes(route.collapse)
-  //       //   }
+  const getRoutes = (allRoutes) =>
+    allRoutes.map((route) => {
+      if (route.collapse) {
+        return getRoutes(route.collapse)
+      }
 
-  //       //   if (route.route) {
-  //       //     return (
-  //       //       <Route
-  //       //         exact
-  //       //         path={route.route}
-  //       //         element={route.component}
-  //       //         key={route.key}
-  //       //       />
-  //       //     )
-  //       //   }
+      if (route.href) {
+        return <Link href={route.href} key={route.key} />
+      }
 
-  //       return null
-  //     })
+      return null
+    })
 
   const configsButton = (
     <MDBox
@@ -162,15 +146,15 @@ export default function App() {
   return direction === 'rtl' ? (
     <CacheProvider value={rtlCache}>
       <ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         {layout === 'dashboard' && (
           <>
             <Sidenav
               color={sidenavColor}
               brand={
                 (transparentSidenav && !darkMode) || whiteSidenav
-                  ? brandDark
-                  : brandWhite
+                  ? brandDark.src
+                  : brandWhite.src
               }
               brandName="Material Dashboard PRO"
               routes={routes}
@@ -190,15 +174,15 @@ export default function App() {
     </CacheProvider>
   ) : (
     <ThemeProvider theme={darkMode ? themeDark : theme}>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       {layout === 'dashboard' && (
         <>
           <Sidenav
             color={sidenavColor}
             brand={
               (transparentSidenav && !darkMode) || whiteSidenav
-                ? brandDark
-                : brandWhite
+                ? brandDark.src
+                : brandWhite.src
             }
             brandName="Material Dashboard PRO"
             routes={routes}
@@ -210,10 +194,11 @@ export default function App() {
         </>
       )}
       {layout === 'vr' && <Configurator />}
-      {/* <Routes>
-        {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
-      </Routes> */}
+      {/* <Routes>*/}
+      {getRoutes(routes)}
+      <Analytics />
+      {/* <Route path="*" element={<Navigate to="/dashboards/analytics" />} /> */}
+      {/* </Routes> */}
     </ThemeProvider>
   )
 }

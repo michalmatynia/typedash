@@ -36,7 +36,11 @@ const dataTableData = {
   rows: [
     {
       product: (
-        <ProductCell image={nikeV22} name="Nike v22 Running" orders={8.232} />
+        <ProductCell
+          image={nikeV22.src}
+          name="Nike v22 Running"
+          orders={8.232}
+        />
       ),
       value: <DefaultCell>$130.992</DefaultCell>,
       adsSpent: <DefaultCell>$9.500</DefaultCell>,
@@ -50,7 +54,7 @@ const dataTableData = {
     {
       product: (
         <ProductCell
-          image={businessKit}
+          image={businessKit.src}
           name="Business Kit (Mug + Notebook)"
           orders={12.821}
         />
@@ -66,7 +70,7 @@ const dataTableData = {
     },
     {
       product: (
-        <ProductCell image={blackChair} name="Black Chair" orders={2.421} />
+        <ProductCell image={blackChair.src} name="Black Chair" orders={2.421} />
       ),
       value: <DefaultCell>$40.600</DefaultCell>,
       adsSpent: <DefaultCell>$9.430</DefaultCell>,
@@ -80,7 +84,7 @@ const dataTableData = {
     {
       product: (
         <ProductCell
-          image={wirelessCharger}
+          image={wirelessCharger.src}
           name="Wireless Charger"
           orders={5.921}
         />
@@ -97,7 +101,7 @@ const dataTableData = {
     {
       product: (
         <ProductCell
-          image={tripKit}
+          image={tripKit.src}
           name="Mountain Trip Kit (Camera + Backpack)"
           orders={921}
         />
