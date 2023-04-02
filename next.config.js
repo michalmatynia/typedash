@@ -13,6 +13,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  experimental: {
+    appDir: true,
+  },
   // If I have links on images
   // images: {
   //   remotePatterns: [

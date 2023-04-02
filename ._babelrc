@@ -1,7 +1,7 @@
-{
-  "presets": ["next/babel"],
-  "plugins": ["@emotion"] // @emotino MUST BE first plugin in Babel configuration
-}
+// {
+//   "presets": ["next/babel"],
+//   "plugins": ["@emotion"] // @emotino MUST BE first plugin in Babel configuration
+// }
 
 // CONFIGURATION FROM Emotion Website for Next
 // {

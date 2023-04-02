@@ -12,9 +12,9 @@ import {
   CT_Footer,
 } from '@components/ui'
 import stylesUntyped from '../../../styles/jss/nextjs-material-kit/pages/landingPage.js'
-import ProductSection from '../../../pages-sections/LandingPage-Sections/ProductSection'
-import TeamSection from '../../../pages-sections/LandingPage-Sections/TeamSection'
-import WorkSection from '../../../pages-sections/LandingPage-Sections/WorkSection'
+import ProductSection from '../../../pages-sections/LandingPage-Sections/ProductSection.jsx'
+import TeamSection from '../../../pages-sections/LandingPage-Sections/TeamSection.jsx'
+import WorkSection from '../../../pages-sections/LandingPage-Sections/WorkSection.jsx'
 import { Box } from '@mui/material'
 
 // const dashboardRoutes = []
