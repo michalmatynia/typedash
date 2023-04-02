@@ -30,8 +30,8 @@ import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypograp
 import MKButton from 'components/ui/material-kit-pro-react-v2.0.0/MKButton'
 
 function SimplePricingCard({
-  variant,
-  color,
+  variant = 'contained',
+  color = 'dark',
   title,
   description,
   price,
@@ -173,12 +173,6 @@ function SimplePricingCard({
       </MKBox>
     </Card>
   )
-}
-
-// Setting default props for the SimplePricingCard
-SimplePricingCard.defaultProps = {
-  color: 'dark',
-  variant: 'contained',
 }
 
 // Typechecking props for the SimplePricingCard

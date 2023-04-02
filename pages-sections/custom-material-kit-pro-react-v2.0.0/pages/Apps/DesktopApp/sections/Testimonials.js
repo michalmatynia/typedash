@@ -19,11 +19,11 @@ import Grid from '@mui/material/Grid'
 import Divider from '@mui/material/Divider'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
 
 // Material Kit 2 PRO React components
-import MiniReviewCard from 'components/blocks/material-kit-pro-react-v2.0.0/Cards/ReviewCards/MiniReviewCard'
+import MiniReviewCard from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Cards/ReviewCards/MiniReviewCard'
 
 // Images
 import review1 from 'public/img/material-kit-pro-react-v2.0.0/team-3.jpg'

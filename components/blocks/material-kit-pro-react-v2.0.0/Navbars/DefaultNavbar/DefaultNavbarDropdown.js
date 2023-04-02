@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 // @mui material components
 import Collapse from '@mui/material/Collapse'
-import Icon from '@mui/material/Icon'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 // Material Kit 2 PRO React components
 import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
@@ -71,9 +71,11 @@ function DefaultNavbarDropdown({
           color={light ? 'white' : 'dark'}
           ml="auto"
         >
-          <Icon sx={{ fontWeight: 'normal', verticalAlign: 'middle' }}>
-            {collapse && 'keyboard_arrow_down'}
-          </Icon>
+          {collapse && (
+            <ExpandMoreIcon
+              sx={{ fontWeight: 'normal', verticalAlign: 'middle' }}
+            />
+          )}
         </MKTypography>
       </MKBox>
       {children && (

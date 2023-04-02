@@ -18,10 +18,10 @@ import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
 
 // Material Kit 2 PRO React examples
-import DefaultInfoCard from 'components/blocks/material-kit-pro-react-v2.0.0/Cards/InfoCards/DefaultInfoCard'
+import DefaultInfoCard from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Cards/InfoCards/DefaultInfoCard'
 
 function Information() {
   return (

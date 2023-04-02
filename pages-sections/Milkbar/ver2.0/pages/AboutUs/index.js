@@ -27,26 +27,20 @@ import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
-import MKButton from 'components/ui/material-kit-pro-react-v2.0.0/MKButton'
-
-// Material Kit 2 PRO React examples
-import DefaultNavbar from 'components/blocks/material-kit-pro-react-v2.0.0/Navbars/DefaultNavbar'
-import DefaultFooter from 'components/blocks/material-kit-pro-react-v2.0.0/Footers/DefaultFooter'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
+import MKButton from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKButton'
+import FacebookIcon from '@mui/icons-material/Facebook'
 
 // About Us page sections
-import Information from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Company/AboutUs/sections/Information'
-import Team from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Company/AboutUs/sections/Team'
-import Featuring from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Company/AboutUs/sections/Featuring'
-import Newsletter from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Company/AboutUs/sections/Newsletter'
-
-// Routes
-import routes from 'data/material-kit-pro-react-v2.0.0/rootsystem/routes'
-import footerRoutes from 'data/material-kit-pro-react-v2.0.0/rootsystem/footer.routes'
-
+import Information from 'pages-sections/milkbar/ver2.0/pages/SingleArticle/sections/Information'
+import Team from 'pages-sections/milkbar/ver2.0/pages/AboutUs/sections/Team'
+import Featuring from 'pages-sections/milkbar/ver2.0/pages/AboutUs/sections/Featuring'
+import Newsletter from 'pages-sections/milkbar/ver2.0/pages/AboutUs/sections/Newsletter'
+import Steps from 'pages-sections/milkbar/ver2.0/pages/SingleArticle/sections/Steps'
+import OurEfforts from 'pages-sections/milkbar/ver2.0/pages/SingleArticle/sections/OurEfforts'
 // Images
-import bgImage from 'public/img/material-kit-pro-react-v2.0.0/bg-about-us.jpg'
+import bgImage from 'public/img/milkbar/ver2.0/parallax/Mosaic_the_process_of_making_architectural.jpg'
 
 function AboutUs() {
   const headerRef = useRef(null)
@@ -69,7 +63,7 @@ function AboutUs() {
   useEffect(() => {
     if (typedJSRef.current) {
       const typedJS = new Typed(typedJSRef.current, {
-        strings: ['team', 'design', 'tool'],
+        strings: ['3d graphics', 'designers', 'architects'],
         typeSpeed: 90,
         backSpeed: 90,
         backDelay: 200,
@@ -83,17 +77,6 @@ function AboutUs() {
 
   return (
     <>
-      <DefaultNavbar
-        routes={routes}
-        action={{
-          type: 'external',
-          route: 'https://www.creative-tim.com/product/material-kit-pro-react',
-          label: 'buy now',
-          color: 'default',
-        }}
-        transparent
-        light
-      />
       <MKBox
         ref={headerRef}
         minHeight="75vh"
@@ -133,7 +116,7 @@ function AboutUs() {
                 },
               })}
             >
-              Work with an amazing <span ref={typedJSRef} />
+              Work with amazing <span ref={typedJSRef} />
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -145,24 +128,17 @@ function AboutUs() {
               We&apos;re constantly trying to express ourselves and actualize
               our dreams. If you have the opportunity to play this game
             </MKTypography>
-            <MKButton
-              color="default"
-              sx={{ color: ({ palette: { dark } }) => dark.main }}
-            >
-              create account
-            </MKButton>
-            <MKTypography variant="h6" color="white" mt={8} mb={1}>
-              Find us on
-            </MKTypography>
+
             <MKBox display="flex" justifyContent="center" alignItems="center">
               <MKTypography
                 component="a"
                 variant="body1"
                 color="white"
-                href="#"
+                href="https://www.facebook.com/Milkbardesigners"
                 mr={3}
               >
-                <i className="fab fa-facebook" />
+                <FacebookIcon />
+                {/* <i className="fab fa-facebook" /> */}
               </MKTypography>
               <MKTypography
                 component="a"
@@ -171,7 +147,7 @@ function AboutUs() {
                 href="#"
                 mr={3}
               >
-                <i className="fab fa-instagram" />
+                {/* <i className="fab fa-instagram" /> */}
               </MKTypography>
               <MKTypography
                 component="a"
@@ -180,7 +156,7 @@ function AboutUs() {
                 href="#"
                 mr={3}
               >
-                <i className="fab fa-twitter" />
+                {/* <i className="fab fa-twitter" /> */}
               </MKTypography>
               <MKTypography
                 component="a"
@@ -188,7 +164,7 @@ function AboutUs() {
                 color="white"
                 href="#"
               >
-                <i className="fab fa-google-plus" />
+                {/* <i className="fab fa-google-plus" /> */}
               </MKTypography>
             </MKBox>
           </Grid>
@@ -207,10 +183,12 @@ function AboutUs() {
         <Team />
         <Featuring />
         <Newsletter />
+        <Steps />
+        <OurEfforts />
+        {/* Page 2 */}
+        {/* <Features /> */}
+        {/* <Support /> */}
       </Card>
-      <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
-      </MKBox>
     </>
   )
 }

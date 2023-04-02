@@ -13,10 +13,10 @@ import {
   Milkbar_AppBarLinks,
 } from '@components/ui'
 import stylesUntyped from '../../../styles/jss/nextjs-material-kit/pages/landingPage.js'
-import Milkbar_ProductSection from '../../../pages-sections/Milkbar/LandinPage-Sections/ProductSection.jsx'
-import Milkbar_SectionCarousel from '../../../pages-sections/Milkbar/LandinPage-Sections/SectionCarousel.jsx'
-import Milkbar_IconCarousel from '../../../pages-sections/Milkbar/LandinPage-Sections/IconSection.jsx'
-import Milkbar_ContactSection from '../../../pages-sections/Milkbar/LandinPage-Sections/ContactSection.jsx'
+import Milkbar_ProductSection from '../../../pages-sections/milkbar/LandinPage-Sections/ProductSection.jsx'
+import Milkbar_SectionCarousel from '../../../pages-sections/milkbar/LandinPage-Sections/SectionCarousel.jsx'
+import Milkbar_IconCarousel from '../../../pages-sections/milkbar/LandinPage-Sections/IconSection.jsx'
+import Milkbar_ContactSection from '../../../pages-sections/milkbar/LandinPage-Sections/ContactSection.jsx'
 
 import { Box } from '@mui/material'
 

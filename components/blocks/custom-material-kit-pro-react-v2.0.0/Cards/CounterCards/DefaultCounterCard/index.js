@@ -1,18 +1,3 @@
-/*
-=========================================================
-* Material Kit 2 PRO React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // prop-types is a library for typechecking of props.
 import PropTypes from 'prop-types'
 
@@ -20,10 +5,16 @@ import PropTypes from 'prop-types'
 import CountUp from 'react-countup'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
 
-function DefaultCounterCard({ color, count, title, description, ...rest }) {
+function DefaultCounterCard({
+  color = 'info',
+  count,
+  title = '',
+  description = '',
+  ...rest
+}) {
   return (
     <MKBox p={2} textAlign="center" lineHeight={1}>
       <MKTypography variant="h1" color={color} textGradient>
@@ -41,13 +32,6 @@ function DefaultCounterCard({ color, count, title, description, ...rest }) {
       )}
     </MKBox>
   )
-}
-
-// Setting default props for the DefaultCounterCard
-DefaultCounterCard.defaultProps = {
-  color: 'info',
-  description: '',
-  title: '',
 }
 
 // Typechecking props for the DefaultCounterCard

@@ -2,8 +2,6 @@ import { BasicComponentProps } from 'types/styleTypes/nextjs-material-kit/compon
 import { roboto, roboto_slab } from './fonts'
 import { FC } from 'react'
 import StyledComponentsRegistry from '@lib/styled-components/registry'
-// import Head from 'next/head'
-// import Script from 'next/script'
 
 export const metadata = {
   title: 'Home',
@@ -52,21 +50,6 @@ const RootLayout: FC<BasicComponentProps> = ({
 }): React.ReactElement => {
   return (
     <html lang="en" className={`${roboto.className} ${roboto_slab.className}`}>
-      {/* <Head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons&display=optional"
-        />
-        <link
-          href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp&display=optional"
-          rel="stylesheet"
-        />
-      </Head> */}
-      {/* <Script src="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp&display=optional" /> */}
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>

@@ -22,11 +22,11 @@ import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
 
 // Material Kit 2 PRO React examples
-import SimplePricingCard from 'components/blocks/material-kit-pro-react-v2.0.0/Cards/PricingCards/SimplePricingCard'
+import SimplePricingCard from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Cards/PricingCards/SimplePricingCard'
 
 function Pricing() {
   const [activeTab, setActiveTab] = useState(0)

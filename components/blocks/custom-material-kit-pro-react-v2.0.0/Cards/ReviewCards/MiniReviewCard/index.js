@@ -21,7 +21,7 @@ import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
 import MKAvatar from 'components/ui/material-kit-pro-react-v2.0.0/MKAvatar'
 import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
 
-function MiniReviewCard({ color, review, author }) {
+function MiniReviewCard({ color = 'transparent', review, author }) {
   return (
     <MKBox
       variant={color === 'transparent' ? 'contained' : 'gradient'}
@@ -63,11 +63,6 @@ function MiniReviewCard({ color, review, author }) {
       </MKBox>
     </MKBox>
   )
-}
-
-// Setting default values for the props of MiniReviewCard
-MiniReviewCard.defaultProps = {
-  color: 'transparent',
 }
 
 // Typechecking props for the MiniReviewCard

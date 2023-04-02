@@ -18,12 +18,12 @@ import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKButton from 'components/ui/material-kit-pro-react-v2.0.0/MKButton'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKButton from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKButton'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
 
 // Material Kit 2 PRO React examples
-import DefaultInfoCard from 'components/blocks/material-kit-pro-react-v2.0.0/Cards/InfoCards/DefaultInfoCard'
+import DefaultInfoCard from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Cards/InfoCards/DefaultInfoCard'
 
 // Images
 import atlassian from 'public/img/material-kit-pro-react-v2.0.0/logos/small-logos/logo-atlassian.svg'

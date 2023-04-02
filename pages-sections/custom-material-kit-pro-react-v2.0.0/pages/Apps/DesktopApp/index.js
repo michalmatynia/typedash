@@ -19,7 +19,7 @@ Coded by www.creative-tim.com
 // import Card from "@mui/material/Card";
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
 // import MKTypography from "components/MKTypography";
 
 // Material Kit 2 PRO React examples
@@ -27,11 +27,11 @@ import DefaultNavbar from 'components/blocks/custom-material-kit-pro-react-v2.0.
 import DefaultFooter from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Footers/DefaultFooter'
 
 // DesktopApp page sections
-import Banner from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Banner'
-import Information from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Information'
-import Features from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Features'
-import Testimonials from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Testimonials'
-import Pricing from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Pricing'
+import Banner from 'pages-sections/custom-material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Banner'
+import Information from 'pages-sections/custom-material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Information'
+import Features from 'pages-sections/custom-material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Features'
+import Testimonials from 'pages-sections/custom-material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Testimonials'
+import Pricing from 'pages-sections/custom-material-kit-pro-react-v2.0.0/pages/Apps/DesktopApp/sections/Pricing'
 
 // Routes
 import routes from 'data/material-kit-pro-react-v2.0.0/rootsystem/routes'

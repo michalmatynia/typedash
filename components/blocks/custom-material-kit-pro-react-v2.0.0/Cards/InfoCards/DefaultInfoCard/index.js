@@ -24,12 +24,12 @@ import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
 import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
 
 function DefaultInfoCard({
-  color,
-  icon,
-  title,
-  description,
-  direction,
-  small,
+  color = 'info',
+  icon = 'info',
+  title = 'Title',
+  description = 'Description',
+  direction = 'left',
+  small = false,
 }) {
   return (
     <MKBox
@@ -70,13 +70,6 @@ function DefaultInfoCard({
       </MKTypography>
     </MKBox>
   )
-}
-
-// Setting default props for the DefaultInfoCard
-DefaultInfoCard.defaultProps = {
-  color: 'info',
-  direction: 'left',
-  small: false,
 }
 
 // Typechecking props for the DefaultInfoCard
