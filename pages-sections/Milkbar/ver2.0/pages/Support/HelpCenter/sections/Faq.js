@@ -1,3 +1,18 @@
+/**
+=========================================================
+* Material Kit 2 PRO React - v2.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
 import { useState } from 'react'
 
 // @mui material components
@@ -5,11 +20,11 @@ import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
+import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
 
 // HelpCenter page components
-import FaqCollapse from 'pages-sections/custom-material-kit-pro-react-v2.0.0/pages/Support/HelpCenter/components/FaqCollapse'
+import FaqCollapse from 'pages-sections/material-kit-pro-react-v2.0.0/pages/Support/HelpCenter/components/FaqCollapse'
 
 function Faq() {
   const [collapse, setCollapse] = useState(false)

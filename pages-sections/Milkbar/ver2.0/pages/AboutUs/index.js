@@ -1,18 +1,3 @@
-/*
-=========================================================
-* Material Kit 2 PRO React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { useEffect, useRef } from 'react'
 
 // rellax
@@ -29,16 +14,20 @@ import Card from '@mui/material/Card'
 // Material Kit 2 PRO React components
 import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
 import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
-import MKButton from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKButton'
 import FacebookIcon from '@mui/icons-material/Facebook'
 
 // About Us page sections
 import Information from 'pages-sections/milkbar/ver2.0/pages/SingleArticle/sections/Information'
 import Team from 'pages-sections/milkbar/ver2.0/pages/AboutUs/sections/Team'
-import Featuring from 'pages-sections/milkbar/ver2.0/pages/AboutUs/sections/Featuring'
-import Newsletter from 'pages-sections/milkbar/ver2.0/pages/AboutUs/sections/Newsletter'
-import Steps from 'pages-sections/milkbar/ver2.0/pages/SingleArticle/sections/Steps'
+
 import OurEfforts from 'pages-sections/milkbar/ver2.0/pages/SingleArticle/sections/OurEfforts'
+import Information2 from 'pages-sections/milkbar/ver2.0/pages/LandingPages/Coworking/sections/Information'
+import Testimonials from 'pages-sections/milkbar/ver2.0/pages/LandingPages/Coworking/sections/Testimonials'
+
+// HelpCenter page sections
+import SocialAnalytics from 'pages-sections/custom-material-kit-pro-react-v2.0.0/pages/Support/HelpCenter/sections/SocialAnalytics'
+import Faq from 'pages-sections/custom-material-kit-pro-react-v2.0.0/pages/Support/HelpCenter/sections/Faq'
+
 // Images
 import bgImage from 'public/img/milkbar/ver2.0/parallax/Mosaic_the_process_of_making_architectural.jpg'
 
@@ -140,32 +129,6 @@ function AboutUs() {
                 <FacebookIcon />
                 {/* <i className="fab fa-facebook" /> */}
               </MKTypography>
-              <MKTypography
-                component="a"
-                variant="body1"
-                color="white"
-                href="#"
-                mr={3}
-              >
-                {/* <i className="fab fa-instagram" /> */}
-              </MKTypography>
-              <MKTypography
-                component="a"
-                variant="body1"
-                color="white"
-                href="#"
-                mr={3}
-              >
-                {/* <i className="fab fa-twitter" /> */}
-              </MKTypography>
-              <MKTypography
-                component="a"
-                variant="body1"
-                color="white"
-                href="#"
-              >
-                {/* <i className="fab fa-google-plus" /> */}
-              </MKTypography>
             </MKBox>
           </Grid>
         </Container>
@@ -181,13 +144,12 @@ function AboutUs() {
       >
         <Information />
         <Team />
-        <Featuring />
-        <Newsletter />
-        <Steps />
+
+        <Information2 />
+        <Testimonials />
+        <SocialAnalytics />
         <OurEfforts />
-        {/* Page 2 */}
-        {/* <Features /> */}
-        {/* <Support /> */}
+        <Faq />
       </Card>
     </>
   )

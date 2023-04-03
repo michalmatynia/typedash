@@ -1,19 +1,3 @@
-/* eslint-disable no-param-reassign */
-/**
-=========================================================
-* Material Kit 2 PRO React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { Fragment, useState, useEffect } from 'react'
 
 // react-router components
@@ -42,10 +26,12 @@ import DefaultNavbarMobile from 'components/blocks/material-kit-pro-react-v2.0.0
 
 // Material Kit 2 PRO React base styles
 import breakpoints from 'themes/material-kit-pro-react-v2.0.0/base/breakpoints'
+import Image from 'next/image'
 
 function DefaultNavbar({
   brand = 'Material Kit 2',
   routes = [],
+  brandIcon = '',
   transparent = false,
   light = false,
   action = false,
@@ -524,6 +510,9 @@ function DefaultNavbar({
               fontWeight="bold"
               color={light ? 'white' : 'dark'}
             >
+              {brandIcon && (
+                <Image src={brandIcon} alt="logo" width={25} height={26} />
+              )}
               {brand}
             </MKTypography>
           </MKBox>
@@ -604,6 +593,7 @@ DefaultNavbar.propTypes = {
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
   transparent: PropTypes.bool,
   light: PropTypes.bool,
+  brandIcon: PropTypes.string,
   action: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.shape({

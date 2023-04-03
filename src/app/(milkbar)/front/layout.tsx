@@ -8,22 +8,28 @@ import { BasicComponentProps } from 'types/styleTypes/nextjs-material-kit/compon
 import { FC } from 'react'
 
 import DefaultNavbar from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Navbars/DefaultNavbar'
-import DefaultFooter from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Footers/DefaultFooter'
 
 // Routes
 import routes from 'data/milkbar/ver2.0/rootsystem/routes'
-import footerRoutes from 'data/material-kit-pro-react-v2.0.0/rootsystem/footer.routes'
 import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+
+import SimpleFooter from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Footers/SimpleFooter'
+import logoImage from 'public/img//milkbar/ver2.0/logo/LOGO_BLUE_05small.png'
 
 const FrontLayout: FC<BasicComponentProps> = ({
   children,
 }): React.ReactElement => {
   return (
     <ThemeProvider theme={theme}>
-      <DefaultNavbar routes={routes} brand="Milkbar Designers" sticky />
+      <DefaultNavbar
+        routes={routes}
+        brandIcon={logoImage.src}
+        brand=""
+        sticky
+      />
       {children}
       <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
+        <SimpleFooter />
       </MKBox>
     </ThemeProvider>
   )

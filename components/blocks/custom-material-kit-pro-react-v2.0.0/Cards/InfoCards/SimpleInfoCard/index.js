@@ -20,10 +20,16 @@ import PropTypes from 'prop-types'
 import Icon from '@mui/material/Icon'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
 
-function SimpleInfoCard({ color, icon, title, description, direction }) {
+function SimpleInfoCard({
+  color = 'info',
+  icon,
+  title,
+  description,
+  direction = 'left',
+}) {
   let alignment = 'flex-start'
 
   if (direction === 'center') {
@@ -69,12 +75,6 @@ function SimpleInfoCard({ color, icon, title, description, direction }) {
       </MKTypography>
     </MKBox>
   )
-}
-
-// Setting default props for the SimpleInfoCard
-SimpleInfoCard.defaultProps = {
-  color: 'info',
-  direction: 'left',
 }
 
 // Typechecking props for the SimpleInfoCard

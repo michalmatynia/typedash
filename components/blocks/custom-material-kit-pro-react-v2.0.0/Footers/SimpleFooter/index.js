@@ -22,13 +22,22 @@ import Link from '@mui/material/Link'
 import Icon from '@mui/material/Icon'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
 
 // Material Kit 2 PRO React base styles
 import typography from 'themes/material-kit-pro-react-v2.0.0/base/typography'
 
-function SimpleFooter({ company, links, light }) {
+function SimpleFooter({
+  company = { href: 'https://www.creative-tim.com/', name: 'Creative Tim' },
+  links = [
+    { href: 'https://www.creative-tim.com/', name: 'Creative Tim' },
+    { href: 'https://www.creative-tim.com/presentation', name: 'About Us' },
+    { href: 'https://www.creative-tim.com/blog', name: 'Blog' },
+    { href: 'https://www.creative-tim.com/license', name: 'License' },
+  ],
+  light = false,
+}) {
   const { href, name } = company
   const { size } = typography
 
@@ -115,18 +124,6 @@ function SimpleFooter({ company, links, light }) {
       </MKBox>
     </Container>
   )
-}
-
-// Setting default values for the props of SimpleFooter
-SimpleFooter.defaultProps = {
-  company: { href: 'https://www.creative-tim.com/', name: 'Creative Tim' },
-  links: [
-    { href: 'https://www.creative-tim.com/', name: 'Creative Tim' },
-    { href: 'https://www.creative-tim.com/presentation', name: 'About Us' },
-    { href: 'https://www.creative-tim.com/blog', name: 'Blog' },
-    { href: 'https://www.creative-tim.com/license', name: 'License' },
-  ],
-  light: false,
 }
 
 // Typechecking props for the SimpleFooter
