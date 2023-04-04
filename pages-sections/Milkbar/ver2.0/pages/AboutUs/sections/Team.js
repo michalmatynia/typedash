@@ -11,8 +11,6 @@ import HorizontalTeamCard from 'components/blocks/custom-material-kit-pro-react-
 
 // Images
 import team1 from 'public/img/milkbar/ver2.0/team/Mosaic_CV_photo_businesswoman_94918aff-5c48-4ad6-b948-8604ae09b8c5.png'
-import team2 from 'public/img/milkbar/ver2.0/team/Mosaic_portrait_photo_javascript_developer_33c4a723-2d94-42ee-8152-609eadac7c69.png'
-import team3 from 'public/img/milkbar/ver2.0/team/Mosaic_portrait_photo_javascript_developer_94eb7e96-59eb-4c90-abbf-5f05d9733ff8.png'
 import team4 from 'public/img/milkbar/ver2.0/team/Mosaic_portrait_photo_javascript_developer_f06538e7-6727-43d2-94fd-3e85f724c56c.png'
 
 function Team() {
@@ -49,26 +47,7 @@ function Team() {
               />
             </MKBox>
           </Grid>
-          <Grid item xs={12} lg={6}>
-            <MKBox mb={1}>
-              <HorizontalTeamCard
-                image={team2.src}
-                name="William Pearce"
-                position={{ color: 'info', label: 'Boss' }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
-              />
-            </MKBox>
-          </Grid>
-          <Grid item xs={12} lg={6}>
-            <MKBox mb={{ xs: 1, lg: 0 }}>
-              <HorizontalTeamCard
-                image={team3.src}
-                name="Ivana Flow"
-                position={{ color: 'info', label: 'Athlete' }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
-              />
-            </MKBox>
-          </Grid>
+
           <Grid item xs={12} lg={6}>
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard

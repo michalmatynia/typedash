@@ -1,11 +1,13 @@
-/* Disable Typescript */
-
 import { forwardRef } from 'react'
-import { Theme } from '@mui/material/styles'
+
+// Custom styles for MKBox
+import MKBoxRoot from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox/MKBoxRoot'
 import { BasicComponentProps } from 'types/styleTypes/nextjs-material-kit/componentProps'
 import { BoxProps } from '@mui/material/Box'
-import MKBoxRoot from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox/MKBoxRoot'
 
+interface OwnerProps {
+  ownerState?: LocalProps
+}
 interface LocalProps {
   variant?: 'contained' | 'gradient'
   bgColor?: string
@@ -13,6 +15,24 @@ interface LocalProps {
   opacity?: number
   borderRadius?: string
   shadow?: string
+  // ownerState?: {
+  //   variant?: 'contained' | 'gradient'
+  //   bgColor?: string
+  //   color?: string
+  //   opacity?: number
+  //   borderRadius?: string
+  //   shadow?: string
+  //   coloredShadow?:
+  //     | 'primary'
+  //     | 'secondary'
+  //     | 'info'
+  //     | 'success'
+  //     | 'warning'
+  //     | 'error'
+  //     | 'light'
+  //     | 'dark'
+  //     | 'none'
+  // }
   coloredShadow?:
     | 'primary'
     | 'secondary'
@@ -25,11 +45,10 @@ interface LocalProps {
     | 'none'
 }
 
-// type OwnerProps = {
-//   ownerState?: LocalProps & Theme
-// }
-
-type Props = LocalProps & BasicComponentProps & BoxProps
+type Props = LocalProps & BasicComponentProps & BoxProps & OwnerProps
+// type Props = LocalProps &
+//   BasicComponentProps &
+//   BoxProps & { ownerState?: LocalProps['ownerState'] }
 
 const MKBox = forwardRef<HTMLDivElement, Props>(function MKBox(
   {

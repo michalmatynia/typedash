@@ -16,13 +16,18 @@ import Divider from '@mui/material/Divider'
 import MuiLink from '@mui/material/Link'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
-import MKButton from 'components/ui/material-kit-pro-react-v2.0.0/MKButton'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
+import MKButton from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKButton'
 
 // Material Kit 2 PRO React examples
-import DefaultNavbarDropdown from 'components/blocks/material-kit-pro-react-v2.0.0/Navbars/DefaultNavbar/DefaultNavbarDropdown'
-import DefaultNavbarMobile from 'components/blocks/material-kit-pro-react-v2.0.0/Navbars/DefaultNavbar/DefaultNavbarMobile'
+import DefaultNavbarDropdown from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Navbars/DefaultNavbar/DefaultNavbarDropdown'
+import DefaultNavbarMobile from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Navbars/DefaultNavbar/DefaultNavbarMobile'
+import ArrowRightIcon from '@mui/icons-material/ArrowRight'
+
+// Material Kit 2 PRO React icons
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 
 // Material Kit 2 PRO React base styles
 import breakpoints from 'themes/material-kit-pro-react-v2.0.0/base/breakpoints'
@@ -272,16 +277,14 @@ function DefaultNavbar({
                 item.name
               )}
               {item.collapse && (
-                <Icon
+                <ArrowRightIcon
                   fontSize="small"
                   sx={{
                     fontWeight: 'normal',
                     verticalAlign: 'middle',
                     mr: -0.5,
                   }}
-                >
-                  keyboard_arrow_right
-                </Icon>
+                />
               )}
             </MKTypography>
           )
@@ -567,7 +570,11 @@ function DefaultNavbar({
             sx={{ cursor: 'pointer' }}
             onClick={openMobileNavbar}
           >
-            <Icon fontSize="default">{mobileNavbar ? 'close' : 'menu'}</Icon>
+            {mobileNavbar ? (
+              <CloseIcon fontSize="default" />
+            ) : (
+              <MenuIcon fontSize="default" />
+            )}
           </MKBox>
         </MKBox>
         <MKBox
