@@ -16,17 +16,16 @@ Coded by www.creative-tim.com
 // @mui material components
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
-import Icon from '@mui/material/Icon'
 // import Stack from "@mui/material/Stack";
 
 // Material Kit 2 PRO React components
 import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
 import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote'
+import image from 'public/img/milkbar/ver2.0/testimonials/Mosaic_designing_buildings_using_virtual_reality_in_the_future_432310e1-64f2-4f86-974b-59b945e89c41.png'
 
 function Testimonials() {
-  const image =
-    'https://images.unsplash.com/photo-1521668576204-57ae3afee860?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'
-
   return (
     <MKBox component="section" position="relative" py={6}>
       <Container sx={{ maxWidth: '100% !important' }}>
@@ -48,13 +47,15 @@ function Testimonials() {
               >
                 <MKBox
                   component="img"
-                  src={image}
+                  src={image.src}
                   alt="image"
                   borderRadius="md"
                   maxWidth="300px"
                   width="100%"
                   position="relative"
                   mt={-12}
+                  height={{ xs: 'auto', md: '100%', xl: '500px' }}
+                  sx={{ objectFit: 'cover' }}
                 />
               </Grid>
               <Grid
@@ -70,7 +71,7 @@ function Testimonials() {
                   color: ({ palette: { white } }) => white.main,
                 }}
               >
-                <Icon fontSize="large">format_quote</Icon>
+                <FormatQuoteIcon fontSize="large" sx={{ size: 'lg' }} />
                 <MKTypography
                   variant="body2"
                   color="white"
@@ -130,21 +131,22 @@ function Testimonials() {
                     display: 'flex',
                     alignItems: 'center',
 
-                    '& .material-icons-round': {
-                      fontSize: '1.125rem',
-                      transform: `translateX(3px)`,
-                      transition:
-                        'transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)',
-                    },
+                    fontSize: '1.125rem',
+                    transform: `translateX(3px)`,
+                    transition:
+                      'transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)',
 
-                    '&:hover .material-icons-round, &:focus .material-icons-round':
-                      {
-                        transform: `translateX(6px)`,
-                      },
+                    '&:hover, &:focus ': {
+                      transform: `translateX(6px)`,
+                    },
                   }}
                 >
-                  See all products
-                  <Icon sx={{ fontWeight: 'bold' }}>arrow_forward</Icon>
+                  See Portfolio
+                  <ArrowForwardIcon
+                    sx={{
+                      marginLeft: '0.3rem',
+                    }}
+                  />
                 </MKTypography>
               </Grid>
             </Grid>

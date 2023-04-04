@@ -14,9 +14,9 @@ import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
 import Places from 'pages-sections/milkbar/ver2.0/pages/LandingPages/Coworking/sections/Places'
 
 // Images
-import bgImage from 'public/img/milkbar/ver2.0/parallax/Mosaic_the_process_of_making_architectural.jpg'
+import bgImage from 'public/img/milkbar/ver2.0/parallax/ddla01korekta-nwsmall.jpg'
 
-function AboutUs() {
+function Portfolio() {
   const headerRef = useRef(null)
 
   // Setting up rellax
@@ -81,4 +81,4 @@ function AboutUs() {
   )
 }
 
-export default AboutUs
+export default Portfolio

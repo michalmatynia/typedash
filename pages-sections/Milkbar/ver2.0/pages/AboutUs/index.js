@@ -29,7 +29,7 @@ import SocialAnalytics from 'pages-sections/custom-material-kit-pro-react-v2.0.0
 import Faq from 'pages-sections/custom-material-kit-pro-react-v2.0.0/pages/Support/HelpCenter/sections/Faq'
 
 // Images
-import bgImage from 'public/img/milkbar/ver2.0/parallax/Mosaic_the_process_of_making_architectural.jpg'
+import bgImage from 'public/img/milkbar/ver2.0/parallax/ddla01korekta-nwsmall.jpg'
 
 function AboutUs() {
   const headerRef = useRef(null)
@@ -127,7 +127,6 @@ function AboutUs() {
                 mr={3}
               >
                 <FacebookIcon />
-                {/* <i className="fab fa-facebook" /> */}
               </MKTypography>
             </MKBox>
           </Grid>

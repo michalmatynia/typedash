@@ -1,34 +1,19 @@
-/*
-=========================================================
-* Material Kit 2 PRO React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
 
 // Material Kit 2 PRO React examples
-import HorizontalTeamCard from 'components/blocks/material-kit-pro-react-v2.0.0/Cards/TeamCards/HorizontalTeamCard'
+import HorizontalTeamCard from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Cards/TeamCards/HorizontalTeamCard'
 
 // Images
-import team1 from 'public/img/material-kit-pro-react-v2.0.0/team-5.jpg'
-import team2 from 'public/img/material-kit-pro-react-v2.0.0/bruce-mars.jpg'
-import team3 from 'public/img/material-kit-pro-react-v2.0.0/ivana-squares.jpg'
-import team4 from 'public/img/material-kit-pro-react-v2.0.0/ivana-square.jpg'
+import team1 from 'public/img/milkbar/ver2.0/team/Mosaic_CV_photo_businesswoman_94918aff-5c48-4ad6-b948-8604ae09b8c5.png'
+import team2 from 'public/img/milkbar/ver2.0/team/Mosaic_portrait_photo_javascript_developer_33c4a723-2d94-42ee-8152-609eadac7c69.png'
+import team3 from 'public/img/milkbar/ver2.0/team/Mosaic_portrait_photo_javascript_developer_94eb7e96-59eb-4c90-abbf-5f05d9733ff8.png'
+import team4 from 'public/img/milkbar/ver2.0/team/Mosaic_portrait_photo_javascript_developer_f06538e7-6727-43d2-94fd-3e85f724c56c.png'
 
 function Team() {
   return (

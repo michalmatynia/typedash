@@ -5,11 +5,9 @@ import Grid from '@mui/material/Grid'
 // Material Kit 2 PRO React components
 import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
 import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
+import bgImage from 'public/img/milkbar/ver2.0/ourefforts/Mosaic_the_process_of_making_architectural_visualisations_1a41a774-2542-4b7c-a5fb-5f1e7275531b.png'
 
 function OurEfforts() {
-  const bgImage =
-    'https://images.unsplash.com/photo-1585975438803-350463f9c9b6?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1867&amp;q=80'
-
   return (
     <MKBox component="section">
       <MKBox
@@ -23,7 +21,7 @@ function OurEfforts() {
             `${linearGradient(
               rgba(gradients.dark.main, 0.6),
               rgba(gradients.dark.state, 0.6)
-            )}, url(${bgImage})`,
+            )}, url(${bgImage.src})`,
           backgroundSize: 'cover',
         }}
       />

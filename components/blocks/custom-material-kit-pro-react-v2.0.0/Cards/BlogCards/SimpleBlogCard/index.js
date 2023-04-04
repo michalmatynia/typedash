@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Kit 2 PRO React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // react-router components
 // import { Link } from 'react-router-dom'
 import Link from 'next/link'
@@ -24,24 +9,33 @@ import Card from '@mui/material/Card'
 import MuiLink from '@mui/material/Link'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
-import MKButton from 'components/ui/material-kit-pro-react-v2.0.0/MKButton'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
+import MKButton from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKButton'
+import Image from 'next/image'
 
 function SimpleBlogCard({ image, title, description, action }) {
   return (
     <Card>
       <MKBox position="relative" borderRadius="lg" mx={2} mt={-3}>
         <MKBox
-          component="img"
-          src={image}
-          alt={title}
-          borderRadius="lg"
-          shadow="md"
           width="100%"
+          shadow="md"
+          height="15rem"
+          borderRadius="lg"
           position="relative"
           zIndex={1}
-        />
+        >
+          <Image
+            src={image}
+            alt="image"
+            fill
+            sizes="(max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
+            style={{ objectFit: 'cover', objectPosition: 'center center' }}
+          />
+        </MKBox>
         <MKBox
           borderRadius="lg"
           shadow="md"

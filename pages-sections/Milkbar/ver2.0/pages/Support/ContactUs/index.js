@@ -23,7 +23,7 @@ import MKButton from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKButto
 import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
 
 // Image
-import bgImage from 'public/img/material-kit-pro-react-v2.0.0/illustrations/illustration-reset.jpg'
+import bgImage from 'public/img/milkbar/ver2.0/contact/aa1.png'
 
 function ContactUs() {
   return (

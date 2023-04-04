@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Kit 2 PRO React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // prop-types is a library for typechecking of props
 import PropTypes from 'prop-types'
 
@@ -21,11 +6,13 @@ import Icon from '@mui/material/Icon'
 import Collapse from '@mui/material/Collapse'
 
 // Material Kit 2 PRO React components
-import MKBox from 'components/ui/material-kit-pro-react-v2.0.0/MKBox'
-import MKTypography from 'components/ui/material-kit-pro-react-v2.0.0/MKTypography'
+import MKBox from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox'
+import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKTypography'
 
 // Material Kit 2 PRO React components
 import borders from 'themes/material-kit-pro-react-v2.0.0/base/borders'
+import AddIcon from '@mui/icons-material/Add'
+import RemoveIcon from '@mui/icons-material/Remove'
 
 function FaqCollapse({ title, open, children, ...rest }) {
   const { borderWidth, borderColor } = borders
@@ -50,7 +37,7 @@ function FaqCollapse({ title, open, children, ...rest }) {
         </MKTypography>
         <MKBox color={open ? 'dark' : 'text'}>
           <Icon sx={{ fontWeight: 'bold' }} fontSize="small">
-            {open ? 'remove' : 'add'}
+            {open ? <RemoveIcon /> : <AddIcon />}
           </Icon>
         </MKBox>
       </MKBox>

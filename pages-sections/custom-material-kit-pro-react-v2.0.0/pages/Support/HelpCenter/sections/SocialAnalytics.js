@@ -24,6 +24,10 @@ import MKTypography from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKT
 // Material Kit 2 PRO React examples
 import DefaultInfoCard from 'components/blocks/custom-material-kit-pro-react-v2.0.0/Cards/InfoCards/DefaultInfoCard'
 
+import GroupsIcon from '@mui/icons-material/Groups'
+import SupportAgentIcon from '@mui/icons-material/SupportAgent'
+import UpdateIcon from '@mui/icons-material/Update'
+
 function SocialAnalytics() {
   return (
     <MKBox component="section" py={6}>
@@ -50,7 +54,7 @@ function SocialAnalytics() {
         <Grid container spacing={3} sx={{ mt: 3 }}>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultInfoCard
-              icon="groups"
+              icon={<GroupsIcon />}
               title="Check our team"
               description="We get insulted by others, lose trust for those others. We get back here to follow
                 my dreams"
@@ -59,7 +63,7 @@ function SocialAnalytics() {
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultInfoCard
-              icon="support_agent"
+              icon={<SupportAgentIcon />}
               title="Support 24/7"
               description="We get insulted by others, lose trust for those others. We get back here to follow
                 my dreams"
@@ -68,7 +72,7 @@ function SocialAnalytics() {
           </Grid>
           <Grid item xs={12} md={6} lg={4} sx={{ mx: 'auto' }}>
             <DefaultInfoCard
-              icon="update"
+              icon={<UpdateIcon />}
               title="Unlimited revisions"
               description="We get insulted by others, lose trust for those others. We get back here to follow
                 my dreams"

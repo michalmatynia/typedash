@@ -34,6 +34,7 @@ function DefaultInfoCard({
   return (
     <MKBox
       lineHeight={1}
+      fontSize={small ? '0.875rem' : '1.5rem'}
       p={direction === 'center' ? 2 : 0}
       textAlign={direction}
     >

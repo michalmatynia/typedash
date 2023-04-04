@@ -18,10 +18,13 @@ import { forwardRef } from 'react'
 // prop-types is a library for typechecking of props
 
 // Custom styles for MKBox
-import MKBoxRoot from 'components/ui/material-kit-pro-react-v2.0.0/MKBox/MKBoxRoot'
+import MKBoxRoot from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox/MKBoxRoot'
 import { BasicComponentProps } from 'types/styleTypes/nextjs-material-kit/componentProps'
 import { BoxProps } from '@mui/material/Box'
 
+interface OwnerProps {
+  ownerState?: LocalProps
+}
 interface LocalProps {
   variant?: 'contained' | 'gradient'
   bgColor?: string
@@ -29,6 +32,24 @@ interface LocalProps {
   opacity?: number
   borderRadius?: string
   shadow?: string
+  // ownerState?: {
+  //   variant?: 'contained' | 'gradient'
+  //   bgColor?: string
+  //   color?: string
+  //   opacity?: number
+  //   borderRadius?: string
+  //   shadow?: string
+  //   coloredShadow?:
+  //     | 'primary'
+  //     | 'secondary'
+  //     | 'info'
+  //     | 'success'
+  //     | 'warning'
+  //     | 'error'
+  //     | 'light'
+  //     | 'dark'
+  //     | 'none'
+  // }
   coloredShadow?:
     | 'primary'
     | 'secondary'
@@ -41,7 +62,10 @@ interface LocalProps {
     | 'none'
 }
 
-type Props = LocalProps & BasicComponentProps & BoxProps
+type Props = LocalProps & BasicComponentProps & BoxProps & OwnerProps
+// type Props = LocalProps &
+//   BasicComponentProps &
+//   BoxProps & { ownerState?: LocalProps['ownerState'] }
 
 const MKBox = forwardRef<HTMLDivElement, Props>(function MKBox(
   {
@@ -72,67 +96,5 @@ const MKBox = forwardRef<HTMLDivElement, Props>(function MKBox(
     />
   )
 })
-
-// const MKBox = forwardRef(
-//   (
-//     {
-//       variant = 'contained',
-//       bgColor,
-//       color,
-//       opacity,
-//       borderRadius,
-//       shadow,
-//       coloredShadow,
-//       ...rest
-//     },
-//     ref
-//   ) => (
-//     <MKBoxRoot
-//       {...rest}
-//       ref={ref}
-//       ownerState={{
-//         variant,
-//         bgColor,
-//         color,
-//         opacity,
-//         borderRadius,
-//         shadow,
-//         coloredShadow,
-//       }}
-//     />
-//   )
-// )
-
-// Setting default values for the props of MKBox
-// MKBox.defaultProps = {
-//   variant: 'contained',
-//   bgColor: 'transparent',
-//   color: 'dark',
-//   opacity: 1,
-//   borderRadius: 'none',
-//   shadow: 'none',
-//   coloredShadow: 'none',
-// }
-
-// Typechecking props for the MKBox
-// MKBox.propTypes = {
-//   variant: PropTypes.oneOf(['contained', 'gradient']),
-//   bgColor: PropTypes.string,
-//   color: PropTypes.string,
-//   opacity: PropTypes.number,
-//   borderRadius: PropTypes.string,
-//   shadow: PropTypes.string,
-//   coloredShadow: PropTypes.oneOf([
-//     'primary',
-//     'secondary',
-//     'info',
-//     'success',
-//     'warning',
-//     'error',
-//     'light',
-//     'dark',
-//     'none',
-//   ]),
-// }
 
 export default MKBox
