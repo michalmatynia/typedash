@@ -1,35 +1,11 @@
 /* Disable Typescript */
 
 import { forwardRef } from 'react'
-import { Theme } from '@mui/material/styles'
-import { BasicComponentProps } from 'types/styleTypes/nextjs-material-kit/componentProps'
 import { BoxProps } from '@mui/material/Box'
-import MKBoxRoot from 'components/ui/custom-material-kit-pro-react-v2.0.0/MKBox/MKBoxRoot'
+import MKBoxRoot from '@components/ui/custom-material-kit-pro-react-v2.0.0/MKBox/MKBoxRoot'
+import { MKBoxProps } from 'types/styleTypes/material-kit-pro-react-v2.0.0/components/MKBox/indexTypes'
 
-interface LocalProps {
-  variant?: 'contained' | 'gradient'
-  bgColor?: string
-  color?: string
-  opacity?: number
-  borderRadius?: string
-  shadow?: string
-  coloredShadow?:
-    | 'primary'
-    | 'secondary'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | 'error'
-    | 'light'
-    | 'dark'
-    | 'none'
-}
-
-// type OwnerProps = {
-//   ownerState?: LocalProps & Theme
-// }
-
-type Props = LocalProps & BasicComponentProps & BoxProps
+type Props = MKBoxProps & BoxProps
 
 const MKBox = forwardRef<HTMLDivElement, Props>(function MKBox(
   {
