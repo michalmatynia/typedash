@@ -6,55 +6,51 @@ import { CSSProperties } from 'react'
 import { BasicComponentProps } from 'types/styleTypes/nextjs-material-kit/componentProps'
 import { MKBoxProps } from 'types/styleTypes/material-kit-pro-react-v2.0.0/components/MKBox/indexTypes'
 
-interface LocalProps {
-  // changeColorOnScroll?: {
-  //   height?: number
-  //   ct_color?:
-  //     | 'inherit'
-  //     | 'default'
-  //     | 'transparent'
-  //     | 'primary'
-  //     | 'secondary'
-  //     | 'white'
-  //     | 'info'
-  //     | 'rose'
-  //     | 'dark'
-  // }
-  // ct_color?:
-  //   | 'inherit'
-  //   | 'default'
-  //   | 'transparent'
-  //   | 'primary'
-  //   | 'secondary'
-  //   | 'white'
-  //   | 'info'
-  //   | 'rose'
-  //   | 'dark'
-  // rightLinks?: ReactNode
-  // leftLinks?: ReactNode
-  // brand?: string
-  // fixed?: boolean
-  // absolute?: boolean
-  // styles?: { [key: string]: CSSProperties } | CSSProperties
-}
+type ValidGradientProps =
+  | 'primary'
+  | 'secondary'
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'dark'
+  | 'light'
 
-// variant = 'contained',
-// bgColor = 'transparent',
-// color = 'dark',
-// opacity = 1,
-// borderRadius = 'none',
-// shadow = 'none',
-// coloredShadow = 'none',
+interface ValidGradientObjectProps {
+  primary: { main?: string; state?: string }
+  transparent: { main?: string; state?: string }
+  secondary: { main?: string; state?: string }
+  info: { main?: string; state?: string }
+  success: { main?: string; state?: string }
+  warning: { main?: string; state?: string }
+  error: { main?: string; state?: string }
+  dark: { main?: string; state?: string }
+  light: { main?: string; state?: string }
+}
 
 interface StyledComponentProps {
   ownerState: MKBoxProps
 }
+
+type BackgroundValueProps =
+  | 'transparent'
+  | 'dark'
+  | 'info'
+  | 'secondary'
+  | 'light'
+  | 'primary'
+  | 'success'
+  | 'error'
+  | 'warning'
+
 interface AdditionalThemeProps {
-  functions: { linearGradient: (color: string, state?: string) => string }
+  functions: {
+    linearGradient: (color?: string, state?: string) => string
+  }
   borders: { borderRadius: MKBoxProps['borderRadius'] }
   boxShadows: { colored: object }
 }
-type Props = LocalProps & BasicComponentProps
+// type Props = LocalProps & BasicComponentProps
 type StyledProps = StyledComponentProps &
   Theme &
   AdditionalThemeProps &
@@ -76,19 +72,10 @@ export default styled(Box, {
   } = ownerState
 
   const { gradients, grey, white } = palette as Palette & {
-    gradients:
-      | 'primary'
-      | 'secondary'
-      | 'info'
-      | 'success'
-      | 'warning'
-      | 'error'
-      | 'dark'
-      | 'light'
-      | { main: string }
-
+    gradients: ValidGradientObjectProps
     white: {
-      main: string
+      main: typeof palette.common.white
+      state: string
     }
   }
   const { linearGradient } = functions
@@ -146,14 +133,32 @@ export default styled(Box, {
   const validBoxShadows = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'inset']
 
   // background value
-  let backgroundValue = bgColor
+  let backgroundValue: string | undefined = bgColor
 
-  // ----
-  if (variant === 'gradient') {
+  // ---
+  if (variant === 'gradient' && bgColor) {
     backgroundValue = validGradients.find((el) => el === bgColor)
-      ? linearGradient(gradients[bgColor].main, gradients[bgColor].state)
+      ? linearGradient('ds', 'ds')
       : white.main
+  } else {
+    backgroundValue = bgColor
   }
+  // ----
+  // if (variant === 'gradient' && bgColor) {
+  //   backgroundValue = validGradients.find((el) => el === bgColor)
+  //     ? linearGradient(gradients[bgColor].main, gradients[bgColor].state)
+  //     : white.main
+  // } else if (validColors.find((el) => el === bgColor) && bgColor) {
+  //   if (palette && palette[bgColor]) {
+  //     // backgroundValue = palette[bgColor]
+  //   }
+  // }
+  //   // backgroundValue = palette[bgColor]
+  //   //   ? palette[bgColor].main
+  //   //   : greyColors[bgColor]
+  // } else {
+  //   backgroundValue = bgColor
+  // }
 
   // ---
 
@@ -194,7 +199,7 @@ export default styled(Box, {
 
   return {
     // opacity,
-    // background: backgroundValue,
+    background: backgroundValue,
     // color: colorValue,
     // borderRadius: borderRadiusValue,
     boxShadow: boxShadowValue,
